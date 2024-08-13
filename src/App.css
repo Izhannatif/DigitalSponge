@@ -1,0 +1,236 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Bebas+Neue&family=Lobster&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Bangers&family=Bebas+Neue&family=Lobster&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* src/App.css or src/components/ServicesSection.css */
+
+
+#root {
+
+  margin: 0 auto;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #facc15;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e0b508;
+}
+
+body {
+  /* background-color: white; */
+  font-family: 'urbanist';
+  overflow-x: hidden;
+  background-color: #ffffff;
+  /* Adjust the background color as needed */
+  background-image: linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px);
+  background-size: 300px 300px;
+  /* Adjust the grid size */
+  cursor: none !important;
+
+}
+
+a {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  transition: transform 2s ease-out;
+  transition: transform 0.2s ease-out, width 0.2s, height 0.2s;
+  text-shadow: 0px 0px 10px black;
+  -webkit-filter: drop-shadow(5px 5px 0px #222);
+  filter: drop-shadow(2px 2px 0px #000000);
+}
+
+.custom-cursor-div {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  /* transform: rotate(20deg) !important; */
+  transform: translate(-50%, -50%) !important;
+  rotate: 20deg !important;
+  transition: transform 2s ease-out;
+  transition: transform 0.2s ease-out, width 0.2s, height 0.2s;
+  text-shadow: 0px 0px 10px black;
+
+}
+
+.custom-cursor.hover {
+  width: 48px;
+  height: 48px;
+}
+
+.overlay-menu ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.overlay-menu li {
+  /* margin: 20px 0; */
+  transition: all 0.3s ease;
+  padding: 35px 15px;
+}
+
+.overlay-menu a {
+  /* color: #1f1f1f; */
+  letter-spacing: -0.2rem;
+  transition: all 0.3s;
+}
+
+.overlay-menu a:hover {
+  border-radius: 20px;
+  padding: 0px 10px;
+  letter-spacing: 0rem;
+}
+
+.overlay-menu-arrow {
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block;
+  margin-left: 10px;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.overlay-menu-item:hover .overlay-menu-arrow {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: bottom;
+    background-size: contain !important;
+  }
+
+  100% {
+    background-position: top;
+    background-size: cover !important;
+  }
+}
+
+.bg-transition {
+  animation: moveBackground 10s alternate infinite;
+}
+
+/* styles.css */
+.letter {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeOutDown {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.animation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: url('./assets/asset2.png')  no-repeat; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.773546918767507) 100%); */
+}
+
+/* src/components/ServicesSection.css */
+
+
+
+
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  /* Ensures that the pseudo-element does not overflow the card */
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: #fef08a;
+  /* Adjust the background color as needed */
+  z-index: 0;
+  /* Ensure it stays behind the text */
+  transition: height 0.7s ease-in-out;
+  /* Smooth transition */
+}
+
+.service-card:hover::before {
+  height: 100%;
+  /* Expand the background to cover the entire card */
+}
+
+.service-card:hover .service-title {
+  color: white !important;
+}
+
+.service-card>* {
+  position: relative;
+  z-index: 1;
+  /* Ensure the text and other content stay above the background */
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.transition-opacity {
+  transition: opacity 1s ease-in-out;
+}
