@@ -76,6 +76,7 @@ const App = () => {
         </Routes> 
         <Contact />
       </AnimatePresence>
+        <Footer />
         <CustomCursor />
       
     </>

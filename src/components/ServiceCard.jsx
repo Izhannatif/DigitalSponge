@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ServiceCard = ({ title, description, categories = [] }) => {
+const ServiceCard = ({ title, description, categories = [],index }) => {
     const [shadowPosition, setShadowPosition] = useState({ x: 5, y: 5 });
 
     const handleMouseMove = (e) => {
@@ -13,18 +13,22 @@ const ServiceCard = ({ title, description, categories = [] }) => {
 
         setShadowPosition({ x: moveX, y: moveY });
     };
+    const handleMouseLeave =() =>{
+        setShadowPosition({ x: 5, y: 5 });
+    }
 
     return (
-        <div className='h-[70vh] w-full flex justify-center items-center p-5'>
+        <div className={`h-[60vh] w-1/2 flex justify-center items-center p-5 ${index === 1 ? 'mt-16' : ''} ${index ===2 ? '-mt-16':''} `}>
             <div
-                className='service-card relative h-full w-full md:w-3/4 border-2 border-stone-900 rounded-2xl p-10 flex flex-col justify-evenly text-stone-900 backdrop-blur-[2px]'
+                className='service-card relative h-full w-full border-2 border-stone-900 rounded-2xl p-10 flex flex-col justify-evenly text-stone-900 backdrop-blur-[2px]'
                 onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
                 style={{
                     boxShadow: `${shadowPosition.x}px ${shadowPosition.y}px 0px #1f1f1f`,
                     transition: 'box-shadow 0.1s ease-out',
                 }}
             >
-                <div className='service-title text-5xl md:text-6xl xl:text-7xl font-bold text-yellow-200 drop-shadow-[4px_4px_0px_#1f1f1f] text-wrap' style={{ WebkitTextStroke: '2px black' }}>{title}</div>
+                <div className='service-title tracking-wide leading-10 text-5xl md:text-6xl xl:text-6xl font-bold text-yellow-200 drop-shadow-[4px_4px_0px_#1f1f1f] text-wrap' style={{ WebkitTextStroke: '2px black' }}>{title}</div>
                 <div className='flex flex-col gap-5'>
                     <div className='text-2xl font-semibold'>{description}</div>
                     <div className='flex gap-3 flex-wrap '>

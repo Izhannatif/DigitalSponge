@@ -26,7 +26,7 @@ const Contact = () => {
                 setIsContactInView(entry.isIntersecting);
             },
             {
-                threshold: 0.5,
+                threshold: 0.3,
             }
         );
 
@@ -42,7 +42,7 @@ const Contact = () => {
 
     return (
         <section ref={contactRef} className='flex justify-center pl-16'>
-            <div className={`${isContactInView ? 'bg-[#fccc0d86] text-[#1f1f1f]' : 'translate-y-[100%] bg-white'} w-full  rounded-[150px] rounded-b-none transition-all duration-500 px-20 py-10 pb-16`}>
+            <div className={`${isContactInView ? 'bg-gradient-to-b from-[#fccc0d86] to-white text-[#1f1f1f]' : 'translate-y-[100%] bg-white'} w-full  rounded-[150px] rounded-b-none transition-all duration-500 px-20 py-10 pb-16`}>
                 <div className='text-center md:text-left text-8xl text-white font-bold drop-shadow-[4px_4px_0px_#1f1f1f]' style={{ WebkitTextStroke: '1px #1f1f1f' }}>
                     Contact
                 </div>
