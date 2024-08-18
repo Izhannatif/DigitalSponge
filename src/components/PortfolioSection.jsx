@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-
+import exploreHeading from '../assets/explore-heading.png'
 const categories = [
     'All',
-    'Web Development',
-    'Illustrations',
+    '2D Animation',
+    '3D Animation',
     'Comics',
-    'Animations',
-    'SEO',
-    'Graphic Design'
+    'Graphic Design',
+    'Illustrations',
+
 ];
 
 const portfolioItems = [
@@ -45,11 +45,12 @@ const PortfolioSection = () => {
     };
 
     return (
-        <div className='pl-32 pt-20'>
-            <p className='drop-shadow-[4px_4px_0px_#1f1f1f] text-8xl text-[#fccb0d] font-extrabold py-5' style={{ WebkitTextStroke: '2px #1f1f1f' }}>
+        <div className='pl-12 pt-20'>
+            {/* <p className='drop-shadow-[4px_4px_0px_#1f1f1f] text-8xl text-[#fccb0d] font-extrabold py-5' style={{ WebkitTextStroke: '2px #1f1f1f' }}>
                 EXPLORE
-            </p>
-            <div className="portfolio-section flex py-20 items-start bg-transparent">
+            </p> */}
+            <img src={exploreHeading} className='w-1/4 pt-5' alt="" />
+            <div className="portfolio-section flex pl-12 py-20 items-start bg-transparent">
                 <div className="categories w-1/5 flex flex-col grid-cols-2 items-start pr-10 gap-2">
                     {categories.map((category) => (
                         <button

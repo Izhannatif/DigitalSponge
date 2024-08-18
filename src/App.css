@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Bangers&family=Bebas+Neue&family=Lobster&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,31 +35,33 @@
   background: #e0b508;
 }
 
-body {
+/* body {
  
   font-family: 'urbanist';
   overflow-x: hidden;
   background-color: #ffffff;
  
-  background: linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px);
   background-size: 200px 200px;
   cursor: none !important;
   background-attachment: fixed;
-}
-/* 
+} */
+
 body {
+  cursor: none !important;
+
   font-family: 'Urbanist', sans-serif;
   overflow-x: hidden;
   background-color: #ffffff;
   background-image:
-    linear-gradient(#ccc 1px, transparent 1px), 
-    linear-gradient(90deg, #ccc 1px, transparent 1px),  
-    url('./assets/crumpled.jpg');  
-  background-blend-mode: normal, normal, multiply;
+    linear-gradient(#000000 1px, transparent 1px), 
+    linear-gradient(90deg, #000000 1px, transparent 1px),  
+    url('./assets/crumpled.jpg');
+    ;  
+  background-blend-mode: overlay, overlay, multiply;
   background-size: 200px 200px, 200px 200px, contain;
-  
+
   background-attachment: fixed;
-} */
+}
 
 a {
   cursor: none !important;
@@ -352,7 +355,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
  .spinner-container {
   position: absolute;
   display: flex;
-  bottom: 100px;
+  top: 100px;
   right: 100px;
   transition: transform 1s ease-in-out;
   -webkit-backdrop-filter: blur(1px);
@@ -360,7 +363,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
 }
 
 .move-to-about {
-  transform: translate(-800%, calc(20vh));
+  transform: translate(-500%, calc(30vh));
 }
 
 .move-to-services {
@@ -368,9 +371,18 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
 }
 
 .move-to-work{
-  transform: translate(-800%, calc(200vh ));
+  transform: translate(00%, calc(90vh ));
 }
 
 .move-to-testimonials{
-  transform: translate(-130%, calc(315vh ));
+  transform: translate(-130%, calc(160vh ));
 }
+
+
+/* .bg-image-sponge{
+  background-image: url('./assets/sponge.png');
+  background-size: 100vw 100vh;
+  background-blend-mode: overlay;
+  
+  background-repeat: no-repeat;
+} */

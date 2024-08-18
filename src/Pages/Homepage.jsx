@@ -29,6 +29,7 @@ import About from '../components/About';
 import ServicesSection from '../components/Services';
 import OurWork from '../components/OurWork';
 import Testimonials from '../components/Testimonials';
+import Process from '../components/Process';
 
 const Homepage = () => {
     const servicesRef = useRef(null);
@@ -44,8 +45,9 @@ const Homepage = () => {
         <>
             <DSTextAnimation servicesRef={servicesRef} aboutRef={aboutRef} ourWorkRef={ourWorkRef} testimonialsRef={testimonialsRef} />
             <About ref={aboutRef} />
-            <ServicesSection ref={servicesRef} />
+            {/* <ServicesSection ref={servicesRef} /> */}
             <OurWork ref={ourWorkRef} />
+            <Process />
             <Testimonials ref={testimonialsRef} />
         </>
     );

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BsSend } from 'react-icons/bs';
-
+import letsConnect from '../assets/lets-connect-heading.png'
+import logo from '../assets/logos/7-2.png'
 const Contact = () => {
     const [isContactInView, setIsContactInView] = useState(false);
     const contactRef = useRef(null);
@@ -41,13 +42,14 @@ const Contact = () => {
     }, []);
 
     return (
-        <section ref={contactRef} className='flex justify-center pl-16'>
-            <div className={`${isContactInView ? 'bg-gradient-to-b from-[#fccc0d86] to-white text-[#1f1f1f]' : 'translate-y-[100%] bg-white'} w-full  rounded-[150px] rounded-b-none transition-all duration-500 px-20 py-10 pb-16`}>
-                <div className='text-center md:text-left text-8xl text-white font-bold drop-shadow-[4px_4px_0px_#1f1f1f]' style={{ WebkitTextStroke: '1px #1f1f1f' }}>
+        <section ref={contactRef} className='flex justify-center items-center'>
+            <div className={`${isContactInView ? 'text-[#1f1f1f]' : 'translate-y-[100%] bg-white'} w-full  rounded-[150px] rounded-b-none transition-all duration-500 px-20 py-10 items-center justify-between flex flex-col`}>
+                {/* <div className='text-center md:text-left text-8xl text-white font-bold drop-shadow-[4px_4px_0px_#1f1f1f]' style={{ WebkitTextStroke: '1px #1f1f1f' }}>
                     Contact
-                </div>
-                <div className='w-full  flex justify-between mt-10 pl-16'>
-                    <form onSubmit={handleSubmit} className='w-full md:w-2/5 flex flex-col gap-5'>
+                </div> */}
+                <img src={letsConnect} className='w-1/2' alt="" />
+                <div className='w-full  flex justify-center py-10 pl-16'>
+                    {/* <form onSubmit={handleSubmit} className='w-full md:w-2/5 flex flex-col gap-5'>
                         <div className='flex flex-col'>
                             <label htmlFor='name' className='text-xl font-semibold mb-2'>Name</label>
                             <input
@@ -92,11 +94,12 @@ const Contact = () => {
                                 </div>
                             </div>
                         </button>
-                    </form>
+                    </form> */}
                     <div className='w-full md:w-2/5 flex justify-center items-center flex-col gap-5'>
-                        <p className='text-4xl font-medium'>Hello@DigitalSponge.com</p>
+                        <p className='text-4xl font-medium animate-bounce'>Info@DigitalSponge.us</p>
                     </div>
                 </div>
+                <img src={logo} className='w-1/5 pt-10' alt="" />
             </div>
         </section>
     );
