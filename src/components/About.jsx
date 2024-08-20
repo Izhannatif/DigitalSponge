@@ -27,16 +27,16 @@ const About = forwardRef((props, ref)  => {
     };
 }, [ref]);
     return (
-        <section ref={ref} className='text-black pl-12 py-10 h-[40vh] flex items-center about-section'>
+        <section ref={ref} className='text-black py-10 px-8 h-[40vh] flex flex-col md:flex-row items-center about-section w-full'>
             <div className='flex flex-col  gap-5 text-xl'>
                 {/* <p className='text-xl font-semibold'>First of,  */}
-                    <span><img src={introduction} className='w-1/3' alt="" /></span>
+                    <span><img src={introduction} className='w-full md:w-1/3' alt="" /></span>
                     {/* <span className='text-4xl'> Introduction. </span> */}
                     {/* </p> */}
-                <div className='flex gap-5 pl-12 text-2xl'>
+                <div className='flex flex-col md:flex-row gap-5 text-2xl w-full pl-16'>
                     <p>About <span className='bg-[#ffcc00] p-1'><span className=' font-medium text-white drop-shadow-[1px_1px_2px_#1f1f1f] text-2xl p-1'>Digital Sponge</span></span></p>
-                    <p>-</p>
-                    <p className='text-2xl w-1/2'>A Team of Skillful and Passionate GFX Artits, Animators and Illustrators who aims to deliver the best art of all forms.
+                    <p className='hidden md:block'>-</p>
+                    <p className='text-2xl w-full md:w-1/2'>A Team of Skillful and Passionate GFX Artits, Animators and Illustrators who aims to deliver the best art of all forms.
                     <span className='text-xl text-[#ffcc00] drop-shadow-[1px_1px_1px_black] shadow-2xl'><Link> Deep dive into out services.</Link></span>
                     </p>
                 </div>

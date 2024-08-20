@@ -5,10 +5,12 @@ import { RiMenu4Fill } from 'react-icons/ri';
 import { MdArrowOutward } from "react-icons/md";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
-import { FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaTwitter, FaInstagram, FaLinkedin, FaCross } from 'react-icons/fa';
 import { AnimatePresence, motion } from 'framer-motion';
 import logo from '../assets//logos/7-2.png';
 import DS1 from '../assets/DS1.png';
+import { FaX } from 'react-icons/fa6';
+import { CgClose } from 'react-icons/cg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,16 +20,16 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`w-full h-16  border-t-0 border-b-2 border-black flex justify-between items-center tracking-wide fixed z-50 `}>
+    <div className={`max-w-full w-full h-16  border-t-0 border-b-2 border-black flex justify-between items-center tracking-wide fixed z-50 `}>
       <div className={`flex h-full ${!menuOpen?  'w-full backdrop-blur-md' : ''}`}>
 
-        <div onClick={toggleMenu} className={`${!menuOpen ? 'bg-[#ffd21d] text-white' : 'bg-transparent text-black'} text-3xl font-bold h-full w-16 grid place-items-center hover:text-black hover:bg-white transition-all duration-500 border-r-2 border-black z-50`}>
-          <div><RiMenu4Fill /></div>
+        <div onClick={toggleMenu} className={`${!menuOpen ? 'bg-[#ffd21d] text-white' : 'bg-transparent text-black border-b-2'} text-3xl font-bold h-full w-16 grid place-items-center hover:text-black hover:bg-white transition-all duration-500 border-r-2  border-black z-50`}>
+          <div>{menuOpen ? <CgClose /> :<RiMenu4Fill />}</div>
         </div>
 
-      <Link to={'/'}> <div className='text-xl p-2 text-black font-bold h-full w-max grid place-items-center hover:text-[#fccb0d] transition-all duration-500 border-r-2 border-black text-center leading-none'>
+      <Link to={'/'}> <div className='text-xl p-2 text-black font-bold h-full w-max grid place-items-center hover:text-[#fccb0d] transition-all duration-500 border-r-2 border-black text-center leading-none '>
           {/* <div>Digtal<br/>Sponge.</div> */}
-          <img src={logo} className='w-40' alt="" />
+          <img src={logo} className='w-40 mix-blend-difference' alt="" />
         </div></Link>
 
 
@@ -38,14 +40,13 @@ const Navbar = () => {
         </p>
 
       </div>
-      {/* <div className='h-full w-16 fixed left-0 top-16 border-r-2 border-black z-30'></div> */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             className={`overlay-menu fixed inset-0 bg-white text-black flex flex-row items-center justify-start pt-10 lg:pt-0 z-20  text-left`}
-            initial={{ x: "-100%", opacity: 0 }}
-            animate={{ x: "0%", opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0 }}
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: "0%", opacity: 1 }}
+            exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             key="menu"
           >

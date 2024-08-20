@@ -52,18 +52,18 @@ const OurWork = forwardRef((props, sectionRef) => {
             variants={sectionVariants}
             transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-            <div className='pl-20 flex justify-between items-center pr-20'>
+            <div className='flex flex-col md:flex-row justify-between items-center '>
                 {/* <p className='heading-text-bg drop-shadow-[4px_4px_0px_#1f1f1f] text-8xl text-[#fccb0d] font-extrabold py-10' style={{ WebkitTextStroke: '2px #1f1f1f' }}>WHAT WE DO</p> */}
-                <img src={whatwedo} alt="" className='w-2/5' />
+                <img src={whatwedo} alt="" className='w-full md:w-2/5 mt-10' />
                 <Link to={'/portfolio'}>
-                    <button className='text-lg font-semibold px-4 py-3 bg-[#facb0d] mt-10 border border-black drop-shadow-[4px_4px_0px_#1f1f1f] hover:drop-shadow-[1px_1px_0px_#1f1f1f] transition-all duration-200' style={{ WebkitTextStroke: '0px #1f1f1f', textShadow: 'none' }}>
+                    <button className='hidden md:block text-lg font-semibold px-4 py-3 bg-[#facb0d] mt-10 border border-black drop-shadow-[4px_4px_0px_#1f1f1f] hover:drop-shadow-[1px_1px_0px_#1f1f1f] transition-all duration-200 md:mr-10' style={{ WebkitTextStroke: '0px #1f1f1f', textShadow: 'none' }}>
                         Explore Full Portfolio
                     </button>
                 </Link>
             </div>
 
             <motion.div
-                className={`overlay-menu inset-0 text-black flex flex-row items-center justify-start pt-10 lg:pt-0 text-left pl-28`}
+                className={`overlay-menu inset-0 text-black flex flex-row items-center justify-start pt-10 lg:pt-0 text-left pl-5 md:pl-28`}
             >
                 <div className="w-full h-full">
                     <ul className="text-2xl h-full flex flex-col justify-evenly font-bold lg:font-semibold">
@@ -86,6 +86,11 @@ const OurWork = forwardRef((props, sectionRef) => {
                     </ul>
                 </div>
             </motion.div>
+            <Link to={'/portfolio'}>
+                    <button className='block md:hidden text-lg font-semibold px-4 py-3 bg-[#facb0d] mt-10 border border-black drop-shadow-[4px_4px_0px_#1f1f1f] hover:drop-shadow-[1px_1px_0px_#1f1f1f] transition-all duration-200 ml-10' style={{ WebkitTextStroke: '0px #1f1f1f', textShadow: 'none' }}>
+                        Explore Full Portfolio
+                    </button>
+                </Link>
         </motion.section>
     );
 });

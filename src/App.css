@@ -10,7 +10,7 @@
 
 
 #root {
-
+  
   margin: 0 auto;
   user-select: none;
   scroll-behavior: smooth;
@@ -354,16 +354,19 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
 
  .spinner-container {
   position: absolute;
-  display: flex;
   top: 100px;
   right: 100px;
+  height: max-content;
+  width: max-content;
   transition: transform 1s ease-in-out;
-  -webkit-backdrop-filter: blur(1px);
+  /* -webkit-backdrop-filter: blur(1px); */
   backdrop-filter: blur(1px);
+  /* color: white !important; */
+  mix-blend-mode: difference !important;
 }
 
 .move-to-about {
-  transform: translate(-500%, calc(30vh));
+  transform: translate(00%, calc(110vh));
 }
 
 .move-to-services {
@@ -371,11 +374,15 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
 }
 
 .move-to-work{
-  transform: translate(00%, calc(90vh ));
+  transform: translate(-300%, calc(135vh ));
 }
 
 .move-to-testimonials{
   transform: translate(-130%, calc(160vh ));
+}
+
+.move-to-process{
+  transform: translate(-130%, calc(350vh ));
 }
 
 
@@ -386,3 +393,26 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
   
   background-repeat: no-repeat;
 } */
+
+
+.testimonial-card{
+  position: relative;
+  overflow: hidden;
+  
+}
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./assets/blob.webp');
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(20px) grayscale(80%);
+  
+  z-index: -1; /* Make sure the background is behind the content */
+  opacity: 0.5; /* Adjust opacity if needed */
+}

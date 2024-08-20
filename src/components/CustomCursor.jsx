@@ -148,7 +148,7 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <div className='h-max w-max'>
+    <div className='h-max w-max hidden md:block'>
       <img
         src={isClicked ? DS2Clicked : DS2}
         alt="Cursor Trail"

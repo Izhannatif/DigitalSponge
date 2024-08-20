@@ -36,6 +36,7 @@ const Homepage = () => {
     const aboutRef = useRef(null);
     const ourWorkRef = useRef(null);
     const testimonialsRef = useRef(null);
+    const processRef = useRef(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -43,11 +44,11 @@ const Homepage = () => {
 
     return (
         <>
-            <DSTextAnimation servicesRef={servicesRef} aboutRef={aboutRef} ourWorkRef={ourWorkRef} testimonialsRef={testimonialsRef} />
+            <DSTextAnimation servicesRef={servicesRef} aboutRef={aboutRef} ourWorkRef={ourWorkRef} testimonialsRef={testimonialsRef} processRef={processRef} />
             <About ref={aboutRef} />
             {/* <ServicesSection ref={servicesRef} /> */}
             <OurWork ref={ourWorkRef} />
-            <Process />
+            <Process ref={processRef} />
             <Testimonials ref={testimonialsRef} />
         </>
     );

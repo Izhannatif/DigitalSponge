@@ -2,6 +2,7 @@ import testimonialsHeading from '../assets/testimonials-heading.png';
 import React, { forwardRef, useEffect } from 'react';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 import Slider from 'react-slick';
+import TestimonialCard from './TestimonialCard';
 
 const testimonials = [
     {
@@ -9,66 +10,45 @@ const testimonials = [
         name: 'John Doe',
         feedback: 'Absolutely fantastic service! Highly recommend.',
         designation: 'CEO, CompanyOne',
+        service:'3D Illustration'
     },
     {
         id: 2,
         name: 'Jane Smith',
         feedback: 'The team is incredibly professional and delivered great results.',
         designation: 'Marketing Head, CompanyTwo',
+        service:'2D Illustration'
     },
     {
         id: 3,
         name: 'Samuel Green',
         feedback: 'Exceeded my expectations in every way. Outstanding work!',
         designation: 'Founder, CompanyThree',
+        service:'Animation'
     },
     {
         id: 4,
         name: 'John Doe',
         feedback: 'Absolutely fantastic service! Highly recommend.',
         designation: 'CEO, CompanyOne',
+        service:'Comics'
     },
     {
         id: 5,
         name: 'Jane Smith',
         feedback: 'The team is incredibly professional and delivered great results.',
         designation: 'Marketing Head, CompanyTwo',
+        service:'3D Animtion'
     },
     {
         id: 6,
         name: 'Samuel Green',
         feedback: 'Exceeded my expectations in every way. Outstanding work!',
         designation: 'Founder, CompanyThree',
+        service:'2D Illustration'
     },
 ];
 
-
-function CustomNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <GrFormNext size={50} color='#1f1f1f' onClick={onClick} style={{ ...style }} className={`bg-white border-2 border-black p-2 border-l-0 drop-shadow-[3px_3px_0px_#1a1a1a]`} />
-    );
-}
-
-function CustomPrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <GrFormPrevious size={50} color='#1f1f1f' onClick={onClick} style={{ ...style }} className={`bg-white border-2 border-black p-2 border-l-0 drop-shadow-[3px_3px_0px_#1a1a1a]`} />
-    );
-}
-
-const settings = {
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    centerMode: true,
-    autoplaySpeed: 5000,
-    loop:true,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
-};
 const Testimonials = forwardRef((props, ref)  => {
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -102,21 +82,11 @@ const Testimonials = forwardRef((props, ref)  => {
                 <span><img src={testimonialsHeading} className='w-2/5' alt="" /></span>
 
             </div>
-            <div className="">
-                <Slider {...settings}>
+            <div className='flex flex-wrap w-full justify-evenly'>
                     {testimonials.map((testimonial) => (
-                        <div key={testimonial.id} className='px-5'>
-                            <div className="flex flex-col justify-evenly py-10 my-10 px-10 shadow-[5px_5px_0px_#1f1f1f] border-2 border-[#1f1f1f] h-[40vh] backdrop-blur-[2px]">
-                                <p className="text-2xl mb-6 font-semibold">"{testimonial.feedback}"</p>
-                                <div>
-                                <h3 className="text-xl font-bold">{testimonial.name}</h3>
-                                <p className="text-lg">{testimonial.designation}</p>
-                                </div>
-                            </div>
-                        </div>
+                        <TestimonialCard key={testimonial.id} name={testimonial.name} review={testimonial.feedback} designation={testimonial.designation} service={testimonial.service}  />
                     ))}
-                </Slider>
-            </div>
+                    </div>
         </section>
     );
 });

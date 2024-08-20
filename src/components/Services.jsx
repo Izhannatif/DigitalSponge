@@ -191,7 +191,7 @@ const ServicesSection = forwardRef((props, ref) => {
             <div>
                 <p className='drop-shadow-[3px_3px_0px_#1f1f1f] text-8xl text-[#fccb0d] font-extrabold pb-10 ' style={{ WebkitTextStroke: '2px #1f1f1f' }}>OUR EXPERTISE</p>
             </div>
-            <div className='flex flex-wrap'>
+            <div className='flex flex-wrap gap-5 justify-center items-center w-full'>
                 {services.map((service, index) => (
                     <ServiceCard key={service.id} title={service.title} categories={service.categories} description={service.description} index={index} />
                 ))}

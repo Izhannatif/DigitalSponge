@@ -1,7 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BsSend } from 'react-icons/bs';
 import letsConnect from '../assets/lets-connect-heading.png'
-import logo from '../assets/logos/7-2.png'
+import logoIcon from '../assets/logos/logo-icon.png'
+import logoText from '../assets/logos/logo-text.png'
+import { LiaLinkedin } from 'react-icons/lia';
+import { FaLinkedin, FaX, FaXTwitter } from 'react-icons/fa6';
+
+import logo from '../assets/logos/4-2.png'
+
+import { FaFacebook, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 const Contact = () => {
     const [isContactInView, setIsContactInView] = useState(false);
     const contactRef = useRef(null);
@@ -42,64 +49,57 @@ const Contact = () => {
     }, []);
 
     return (
-        <section ref={contactRef} className='flex justify-center items-center'>
-            <div className={`${isContactInView ? 'text-[#1f1f1f]' : 'translate-y-[100%] bg-white'} w-full  rounded-[150px] rounded-b-none transition-all duration-500 px-20 py-10 items-center justify-between flex flex-col`}>
-                {/* <div className='text-center md:text-left text-8xl text-white font-bold drop-shadow-[4px_4px_0px_#1f1f1f]' style={{ WebkitTextStroke: '1px #1f1f1f' }}>
-                    Contact
-                </div> */}
-                <img src={letsConnect} className='w-1/2' alt="" />
-                <div className='w-full  flex justify-center py-10 pl-16'>
-                    {/* <form onSubmit={handleSubmit} className='w-full md:w-2/5 flex flex-col gap-5'>
-                        <div className='flex flex-col'>
-                            <label htmlFor='name' className='text-xl font-semibold mb-2'>Name</label>
-                            <input
-                                type='text'
-                                id='name'
-                                name='name'
-                                value={formData.name}
-                                onChange={handleChange}
-                                className='p-3 text-xl rounded-lg border-2 border-[#1f1f1f] shadow-[4px_4px_0px_#1f1f1f] focus:outline-none '
-                            />
-                        </div>
-                        <div className='flex flex-col'>
-                            <label htmlFor='email' className='text-xl font-semibold mb-2'>Email</label>
-                            <input
-                                type='email'
-                                id='email'
-                                name='email'
-                                value={formData.email}
-                                onChange={handleChange}
-                                className='p-3 text-xl rounded-lg border-2 border-[#1f1f1f] shadow-[4px_4px_0px_#1f1f1f] focus:outline-none'
-                            />
-                        </div>
-                        <div className='flex flex-col'>
-                            <label htmlFor='message' className='text-xl font-semibold mb-2'>Message</label>
-                            <textarea
-                                id='message'
-                                name='message'
-                                value={formData.message}
-                                onChange={handleChange}
-                                rows='3'
-                                className='p-3 text-xl rounded-lg border-2 border-[#1f1f1f] shadow-[4px_4px_0px_#1f1f1f] focus:outline-none'
-                            />
-                        </div>
-                        <button
-                            type='submit'
-                            className='p-4 bg-[#ececec7e] hover:bg-white text-stone-950 text-xl font-bold rounded-lg shadow-[5px_5px_0px_#1f1f1f] transition-all duration-300 group hover:shadow-[2px_2px_0px_#1f1f1f] border-2 border-black'
-                        >
-                            <div className='flex justify-center items-center gap-3'>
-                                <div>Send Message</div>
-                                <div>
-                                    <BsSend className='group-hover:translate-x-8 group-hover:-translate-y-8 group-hover:opacity-0 transition-all duration-300 font-bold ' />
-                                </div>
-                            </div>
-                        </button>
-                    </form> */}
+        <section ref={contactRef} className='flex justify-center items-center max-w-screen '>
+            <div className={`${isContactInView ? 'text-[#fff] bg-[#000000f1]' : 
+                'translate-y-[100%] opacity-0 bg-white'} 
+                w-full md:rounded-[100px] md:rounded-b-none transition-all duration-500 px-5 md:px-20 py-10 items-center justify-between flex flex-col`}>
+
+                <img src={letsConnect} className='w-full md:w-1/2' alt="" />
+
+                <div className='w-full flex flex-col md:flex-row justify-between py-10  items-center'>
+
                     <div className='w-full md:w-2/5 flex justify-center items-center flex-col gap-5'>
-                        <p className='text-4xl font-medium animate-bounce'>Info@DigitalSponge.us</p>
+                        <div>
+                            <p>Email us</p>
+                            <p className='text-xl md:text-4xl font-medium'>Info@DigitalSponge.us</p>
+                        </div>
+                    </div>
+                    <div className='w-full md:w-2/5 flex justify-center items-center flex-col gap-5'>
+                        <div>
+                            <p>Give us a ring</p>
+                            <p className='text-xl md:text-4xl font-medium'>+1 (570) 609 2038</p>
+                        </div>
                     </div>
                 </div>
-                <img src={logo} className='w-1/5 pt-10' alt="" />
+
+                <div className='flex w-full md:w-1/5 justify-center items-center mb-10 md:-mb-10'>
+                    <img src={logoIcon} className='w-1/3 md:w-1/2 pt-10 ' alt="" />
+                    <img src={logoText} className='w-1/3 md:w-1/2 h-max pt-10 invert' alt="" />
+                </div>
+                <div className='flex flex-col md:flex-row w-full justify-between items-start md:items-end gap-16'>
+                    <div className='flex w-max gap-10'>
+                        <div className=' items-center flex w-max px-4 py-2 justify-between gap-3 text-xl font-bold border border-white rounded-full hover:bg-[#ffcc00]
+                    hover:text-[#1f1f1f] transition-all duration-300'>
+                            LinkedIn
+                            <FaLinkedinIn />
+                        </div>
+                        <div className='items-center flex px-4 py-2 justify-between w-max gap-3 text-xl font-bold border border-white rounded-full hover:bg-[#ffcc00] transition-all duration-300 hover:text-[#1f1f1f]'>
+                            Instagram
+                            <FaInstagram />
+                        </div>
+                    </div>
+                    <div className='flex w-max gap-10'>
+                        <div className='items-center flex px-4 py-2 justify-between w-max gap-3 text-xl font-bold border border-white rounded-full hover:bg-[#ffcc00] transition-all duration-300 hover:text-[#1f1f1f]'>
+                            Twitter
+                            <FaXTwitter />
+                        </div>
+                        <div className='items-center flex px-4 py-2 justify-between w-max gap-3 text-xl font-bold border border-white rounded-full hover:bg-[#ffcc00] transition-all duration-300 hover:text-[#1f1f1f]'>
+                            Facebook
+                            <FaFacebookF />
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     );
