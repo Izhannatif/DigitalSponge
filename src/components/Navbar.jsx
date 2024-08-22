@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`max-w-full w-full h-16  border-t-0 border-b-2 border-black flex justify-between items-center tracking-wide fixed z-50 `}>
+    <div className={`max-w-full w-full h-16 border-t-0 border-b-2 border-black flex justify-between items-center tracking-wide fixed z-50 `}>
       <div className={`flex h-full ${!menuOpen?  'w-full backdrop-blur-md' : ''}`}>
 
         <div onClick={toggleMenu} className={`${!menuOpen ? 'bg-[#ffd21d] text-white' : 'bg-transparent text-black border-b-2'} text-3xl font-bold h-full w-16 grid place-items-center hover:text-black hover:bg-white transition-all duration-500 border-r-2  border-black z-50`}>
@@ -35,7 +35,7 @@ const Navbar = () => {
 
       </div>
 
-      <div className='px-10 border-l-2 border-black h-full w-40 grid place-items-center backdrop-blur-md font-semibold hover:bg-[#fccb0d] hover:text-white duration-500 transition-all'>
+      <div className='hidden md:grid px-10 border-l-2 border-black h-full w-40  place-items-center backdrop-blur-md font-semibold hover:bg-[#fccb0d] hover:text-white duration-500 transition-all'>
         <p className=' '>PAY NOW
         </p>
 
@@ -43,14 +43,14 @@ const Navbar = () => {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className={`overlay-menu fixed inset-0 bg-white text-black flex flex-row items-center justify-start pt-10 lg:pt-0 z-20  text-left`}
+            className={`overlay-menu fixed inset-0 bg-white text-black flex flex-row items-center justify-start pt-10 lg:pt-0 z-20  text-left max-h-screen`}
             initial={{ y: "-100%", opacity: 0 }}
             animate={{ y: "0%", opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             key="menu"
           >
-            <div className="w-full lg:w-1/2 pl-0 lg:pl-20 h-full ">
+            <div className="w-full lg:w-1/2 pl-0 lg:pl-20 max-h-screen ">
               <ul className="text-2xl h-full flex flex-col justify-evenly font-bold lg:font-semibold">
                 <li className='overlay-menu-item text-5xl lg:text-7xl'>
                   <Link to='home' onClick={toggleMenu}>Home</Link>

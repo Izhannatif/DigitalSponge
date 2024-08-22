@@ -78,7 +78,7 @@ const OurWork = forwardRef((props, sectionRef) => {
                                 variants={listItemVariants}
                                 transition={{ delay: 0.2 * index, duration: 0.5, ease: 'easeIn' }}
                             >
-                                <Link>{item}</Link>
+                                <p>{item}</p>
                                 
                             </motion.li>
                             <hr  className=' border-stone-400 rounded-xl mt-5 mr-20' />

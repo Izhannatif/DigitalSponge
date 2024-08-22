@@ -108,18 +108,17 @@ a {
   padding: 35px 15px;
 }
 
-.overlay-menu a {
+.overlay-menu a,.overlay-menu p {
   /* color: #1f1f1f; */
   letter-spacing: -0.2rem;
   transition: all 0.3s;
 }
 
-.overlay-menu a:hover {
+.overlay-menu a:hover,.overlay-menu p:hover {
   border-radius: 20px;
   padding: 0px 10px;
   letter-spacing: 0rem;
 }
-
 .overlay-menu-arrow {
   opacity: 0;
   visibility: hidden;
