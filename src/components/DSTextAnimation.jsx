@@ -133,11 +133,11 @@
 //             <Marquee  speed={100} loop={0} pauseOnHover={true} autoFill={true} direction='left' className='overflow-hidden py-0 lg:py-2'>
 //                 <p className='text-[#646464c4] text-6xl lg:text-6xl font-semibold uppercase tracking-tighter'>
 //                     <span className='hover:text-[#ffcc00] transition-all duration-500'>About</span> .
-                    
+
 //                     <span  className='hover:text-[#ffcc00] transition-all duration-500'> 
 //                         {/* <img className='w-1/5' src={servicesText} alt="" /> . */}
 //                     </span> 
-                    
+
 //                     <span className='hover:text-[#ffcc00] transition-all duration-500'>Process&nbsp;.</span><span className='hover:text-[#ffcc00] transition-all duration-500'> Contact&nbsp;.</span>&nbsp;
 //                 </p>
 //             </Marquee>
@@ -307,68 +307,42 @@ const DSTextAnimation = () => {
                 ))}
             </h1>
             <h1 className="text-center block md:hidden">
-  {['DIGITAL', 'SPONGE'].map((word, wordIndex) => (
-    <span key={wordIndex} className="block">
-      {Array.from(word).map((letter, index) => (
-        <span
-          key={index}
-          className="letter fadeInUp text-8xl md:text-7xl lg:text-8xl xl:text-9xl md:tracking-widest tracking-wider font-semibold drop-shadow-md hover:scale-110"
-          style={{
-            fontFamily: letterStyles[index].fontFamily,
-            fontStyle: letterStyles[index].fontStyle,
-            color: letterStyles[index].color,
-            textShadow: letterStyles[index].color === '#ffcc00' ? '4px 4px 0px #1f1f1f' : '4px 4px 0px #facb0d'
-          }}
-        >
-          {letter}
-        </span>
-      ))}
-    </span>
-  ))}
-</h1>
-
-            {/* <img src={logo} className='' alt="" /> */}
+                {['DIGITAL', 'SPONGE'].map((word, wordIndex) => (
+                    <span key={wordIndex} className="block">
+                        {Array.from(word).map((letter, index) => (
+                            <span
+                                key={index}
+                                className="letter fadeInUp text-8xl md:text-7xl lg:text-8xl xl:text-9xl md:tracking-widest tracking-wider font-semibold drop-shadow-md hover:scale-110"
+                                style={{
+                                    fontFamily: letterStyles[index].fontFamily,
+                                    fontStyle: letterStyles[index].fontStyle,
+                                    color: letterStyles[index].color,
+                                    textShadow: letterStyles[index].color === '#ffcc00' ? '4px 4px 0px #1f1f1f' : '4px 4px 0px #facb0d'
+                                }}
+                            >
+                                {letter}
+                            </span>
+                        ))}
+                    </span>
+                ))}
+            </h1>
             <div className='text-2xl relative my-10 w-max text-center'>
                 WELCOME TO THE <p className='bg-[#facb0d] text-white p-1 drop-shadow-[3px_3px_0px_#1f1f1f]'> WORLD OF ART</p>
             </div>
-           <div className='bg-[#ffcc00] w-full absolute bottom-5 z-30'>
-           <Marquee className='w-full py-3' loop={0} autoFill={true} speed={70} direction='right' > 
-                <p className='text-5xl font-white flex justify-center items-center gap-3 font-black'>
-                    LET'S TALK <FaArrowUp className='h-10 w-10 rotate-[40deg] font-thin' /> <span className='font-semibold text-4xl'> INFO@DIGITALSPONGE.US &nbsp;</span>
-                </p>
-           </Marquee>
-           </div>
-           <div className='bg-gradient-to-b from-[#35353583] to-[#080808a6] w-full absolute bottom-6 z-20 rotate-[4deg] md:rotate-[2deg]'>
-           <Marquee className='w-full py-8'> 
-           </Marquee>
-           </div>
-           <div className='bg-gradient-to-b to-[#35353583] from-[#080808a6] w-full absolute bottom-6 z-20 rotate-[-4deg] md:rotate-[-2deg]'>
-           <Marquee className='w-full py-8'>
-           </Marquee>
-           </div>
-            
-           <div
-                className={`hidden md:flex spinner-container-2 
-                    isServicesInView ? 'move-to-services' : isAboutInView ? 'move-to-about' : isOurWorkInView ? 'move-to-work' : isTestimonialsInView ? 'move-to-testimonials' : isProcessInView ? 'move-to-process' : ''
-                    }`}
-            >
-                <div className="spinner ">
-                    <svg viewBox="0 0 100 100">
-                        <path
-                            id="circlePath"
-                            d="M50,10 a40,40 0 1,1 0,80 a40,40 0 1,1 0,-80"
-                            fill="transparent"                            
-                        />
-                        <text >
-                            <textPath xlinkHref="#circlePath" startOffset="0%">
-                                digital • sponge • digital • sponge • digital • sponge •
-                            </textPath>
-                        </text>
-                    </svg>
-                    <div className="sponge-image">
-                        <img src={sponge} alt="Sponge" />
-                    </div>
-                </div>
+            <div className='bg-[#ffcc00] w-full absolute bottom-5 z-30'>
+                <Marquee className='w-full py-3' loop={0} autoFill={true} speed={70} direction='right' >
+                    <p className='text-5xl font-white flex justify-center items-center gap-3 font-black'>
+                        LET'S TALK <FaArrowUp className='h-10 w-10 rotate-[40deg] font-thin' /> <span className='font-semibold text-4xl'> INFO@DIGITALSPONGE.US &nbsp;</span>
+                    </p>
+                </Marquee>
+            </div>
+            <div className='bg-gradient-to-b from-[#35353583] to-[#080808a6] w-full absolute bottom-6 z-20 rotate-[4deg] md:rotate-[2deg]'>
+                <Marquee className='w-full py-8'>
+                </Marquee>
+            </div>
+            <div className='bg-gradient-to-b to-[#35353583] from-[#080808a6] w-full absolute bottom-6 z-20 rotate-[-4deg] md:rotate-[-2deg]'>
+                <Marquee className='w-full py-8'>
+                </Marquee>
             </div>
         </div>
     );
