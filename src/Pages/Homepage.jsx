@@ -23,13 +23,14 @@
 
 // export default Homepage
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import DSTextAnimation from '../components/DSTextAnimation';
 import About from '../components/About';
 import ServicesSection from '../components/Services';
 import OurWork from '../components/OurWork';
 import Testimonials from '../components/Testimonials';
 import Process from '../components/Process';
+import Loader from '../components/Loader';
 
 const Homepage = () => {
     const servicesRef = useRef(null);
@@ -42,7 +43,10 @@ const Homepage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+
     return (
+
+
         <>
             <DSTextAnimation servicesRef={servicesRef} aboutRef={aboutRef} ourWorkRef={ourWorkRef} testimonialsRef={testimonialsRef} processRef={processRef} />
             <About ref={aboutRef} />
@@ -50,7 +54,9 @@ const Homepage = () => {
             <OurWork ref={ourWorkRef} />
             <Process ref={processRef} />
             <Testimonials ref={testimonialsRef} />
+
         </>
+
     );
 };
 

@@ -45,6 +45,7 @@ const OurWork = forwardRef((props, sectionRef) => {
 
     return (
         <motion.section 
+        key={1}
             ref={sectionRef} 
             className='w-full py-10'
             initial="hidden"
@@ -72,7 +73,7 @@ const OurWork = forwardRef((props, sectionRef) => {
                         {['Animations', 'Comics', 'Illustrations', 'Characters'].map((item, index) => (
                             <div>
                             <motion.li
-                                key={item}
+                                key={index}
                                 className='overlay-menu-item text-5xl lg:text-7xl'
                                 variants={listItemVariants}
                                 transition={{ delay: 0.2 * index, duration: 0.5, ease: 'easeIn' }}

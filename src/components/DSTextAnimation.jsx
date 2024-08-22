@@ -193,7 +193,7 @@ import logo from '../assets/logos/5.png'
 const fontFamilies = ['bangers', 'Lobster', 'Bebas Neue', ''];
 const fontStyles = ['normal'];
 const colors = ['#ffcc00', '#1a1a1a'];
-const DSTextAnimation = ({ servicesRef, aboutRef, ourWorkRef, testimonialsRef, processRef }) => {
+const DSTextAnimation = () => {
     const [letterStyles, setLetterStyles] = useState(
         'DIGITAL SPONGE'.split('').map(() => ({
             fontFamily: fontFamilies[Math.floor(Math.random() * fontFamilies.length)],
@@ -215,69 +215,75 @@ const DSTextAnimation = ({ servicesRef, aboutRef, ourWorkRef, testimonialsRef, p
 
         return () => clearInterval(intervalId);
     }, []);
+    // const [isTextAnimationInView, setIsTextAnimationInView] =useState(false);
+    // const [isAboutInView, setIsAboutInView] = useState(false);
+    // const [isServicesInView, setIsServicesInView] = useState(false);
+    // const [isOurWorkInView, setIsOurWorkInView] = useState(false);
+    // const [isProcessInView, setIsProcessInView] =useState(false);
+    // const [isTestimonialsInView, setIsTestimonialsInView] = useState(false);
 
-    const [isAboutInView, setIsAboutInView] = useState(false);
-    const [isServicesInView, setIsServicesInView] = useState(false);
-    const [isOurWorkInView, setIsOurWorkInView] = useState(false);
-    const [isProcessInView, setIsProcessInView] =useState(false);
-    const [isTestimonialsInView, setIsTestimonialsInView] = useState(false);
+    // useEffect(() => {
+    //     const aboutSection = aboutRef.current;
+    //     const servicesSection = servicesRef.current;
+    //     const ourWorkSection = ourWorkRef.current;
+    //     const testimonialsSection = testimonialsRef.current;
+    //     const processSection = processRef.current;
 
-    useEffect(() => {
-        const aboutSection = aboutRef.current;
-        const servicesSection = servicesRef.current;
-        const ourWorkSection = ourWorkRef.current;
-        const testimonialsSection = testimonialsRef.current;
-        const processSection = processRef.current;
+    //     const observerTextAnimation = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsAboutInView(entry.isIntersecting);
+    //         },
+    //         { threshold: 0.3 }
+    //     );
+    //     const observerAbout = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsAboutInView(entry.isIntersecting);
+    //         },
+    //         { threshold: 0.3 }
+    //     );
 
-        const observerAbout = new IntersectionObserver(
-            ([entry]) => {
-                setIsAboutInView(entry.isIntersecting);
-            },
-            { threshold: 0.3 }
-        );
+    //     const observerServices = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsServicesInView(entry.isIntersecting);
+    //         },
+    //         { threshold: 0.1 }
+    //     );
 
-        const observerServices = new IntersectionObserver(
-            ([entry]) => {
-                setIsServicesInView(entry.isIntersecting);
-            },
-            { threshold: 0.1 }
-        );
+    //     const observerOurWork = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsOurWorkInView(entry.isIntersecting);
+    //         },
+    //         { threshold: 0.3 }
+    //     ); 
+    //     const observerProcess = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsProcessInView(entry.isIntersecting);
+    //         },
+    //         { threshold: 0.1 }
+    //     );
 
-        const observerOurWork = new IntersectionObserver(
-            ([entry]) => {
-                setIsOurWorkInView(entry.isIntersecting);
-            },
-            { threshold: 0.3 }
-        ); 
-        const observerProcess = new IntersectionObserver(
-            ([entry]) => {
-                setIsProcessInView(entry.isIntersecting);
-            },
-            { threshold: 0.1 }
-        );
+    //     const observerTestimonials = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsTestimonialsInView(entry.isIntersecting);
+    //         },
+    //         { threshold: 0.3 }
+    //     );
 
-        const observerTestimonials = new IntersectionObserver(
-            ([entry]) => {
-                setIsTestimonialsInView(entry.isIntersecting);
-            },
-            { threshold: 0.3 }
-        );
+    //     if (aboutSection) observerAbout.observe(aboutSection);
+    //     if (servicesSection) observerServices.observe(servicesSection);
+    //     if (ourWorkSection) observerOurWork.observe(ourWorkSection);
+    //     if (testimonialsSection) observerTestimonials.observe(testimonialsSection);
+    //     if (processSection) observerProcess.observe(processSection);
 
-        if (aboutSection) observerAbout.observe(aboutSection);
-        if (servicesSection) observerServices.observe(servicesSection);
-        if (ourWorkSection) observerOurWork.observe(ourWorkSection);
-        if (testimonialsSection) observerTestimonials.observe(testimonialsSection);
-        if (processSection) observerProcess.observe(processSection);
+    //     return () => {
+    //         if (aboutSection) observerAbout.unobserve(aboutSection);
+    //         if (servicesSection) observerServices.unobserve(servicesSection);
+    //         if (ourWorkSection) observerOurWork.unobserve(ourWorkSection);
+    //         if (testimonialsSection) observerTestimonials.unobserve(testimonialsSection);
+    //         if (processSection) observerProcess.unobserve(processSection);
 
-        return () => {
-            if (aboutSection) observerAbout.unobserve(aboutSection);
-            if (servicesSection) observerServices.unobserve(servicesSection);
-            if (ourWorkSection) observerOurWork.unobserve(ourWorkSection);
-            if (testimonialsSection) observerTestimonials.unobserve(testimonialsSection);
-            if (processSection) observerProcess.unobserve(processSection);
-
-        };
-    }, [aboutRef, servicesRef, ourWorkRef, testimonialsRef, processRef]);
+    //     };
+    // }, [aboutRef, servicesRef, ourWorkRef, testimonialsRef, processRef]);
 
     return (
         <div className="animation-container fixed z-10 ">
@@ -323,7 +329,7 @@ const DSTextAnimation = ({ servicesRef, aboutRef, ourWorkRef, testimonialsRef, p
 
             {/* <img src={logo} className='' alt="" /> */}
             <div className='text-2xl relative my-10 w-max text-center'>
-                WELCOME TO THE <p className='bg-[#facb0d] text-white p-1 drop-shadow-[3px_3px_0px_#1f1f1f]'> WORLD OF FART</p>
+                WELCOME TO THE <p className='bg-[#facb0d] text-white p-1 drop-shadow-[3px_3px_0px_#1f1f1f]'> WORLD OF ART</p>
             </div>
            <div className='bg-[#ffcc00] w-full absolute bottom-5 z-30'>
            <Marquee className='w-full py-3' loop={0} autoFill={true} speed={70} direction='right' > 
@@ -341,22 +347,19 @@ const DSTextAnimation = ({ servicesRef, aboutRef, ourWorkRef, testimonialsRef, p
            </Marquee>
            </div>
             
-            <div
-                className={`hidden md:flex spinner-container ${isServicesInView
-                    ? 'move-to-services'
-                    : isAboutInView
-                        ? 'move-to-about'
-                        : isOurWorkInView ? 'move-to-work' : isTestimonialsInView ? 'move-to-testimonials' : isProcessInView ? 'move-to-process' : ''
+           <div
+                className={`hidden md:flex spinner-container-2 
+                    isServicesInView ? 'move-to-services' : isAboutInView ? 'move-to-about' : isOurWorkInView ? 'move-to-work' : isTestimonialsInView ? 'move-to-testimonials' : isProcessInView ? 'move-to-process' : ''
                     }`}
             >
-                <div className="spinner hidden">
+                <div className="spinner ">
                     <svg viewBox="0 0 100 100">
                         <path
                             id="circlePath"
                             d="M50,10 a40,40 0 1,1 0,80 a40,40 0 1,1 0,-80"
-                            fill="transparent"
+                            fill="transparent"                            
                         />
-                        <text>
+                        <text >
                             <textPath xlinkHref="#circlePath" startOffset="0%">
                                 digital • sponge • digital • sponge • digital • sponge •
                             </textPath>
