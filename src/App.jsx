@@ -39,6 +39,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor'
 import Loader from './components/Loader';
+import Payment from './Pages/Payment';
 
 const App = () => {
   const location = useLocation();
@@ -83,6 +84,20 @@ const App = () => {
                     transition={{ duration: 0.5 }}
                   >
                     <PortfolioSection />
+                  </motion.div>
+                }
+              />
+              <Route
+                key={3}
+                path="/payment"
+                element={
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 50 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Payment />
                   </motion.div>
                 }
               />

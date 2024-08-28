@@ -21,13 +21,13 @@ const Navbar = () => {
 
   return (
     <div className={`max-w-full w-full h-16 border-t-0 border-b-2 border-black flex justify-between items-center tracking-wide fixed z-50 `}>
-      <div className={`flex h-full ${!menuOpen?  'w-full backdrop-blur-md' : ''}`}>
+      <div className={`flex h-full ${!menuOpen ? 'w-full backdrop-blur-md' : ''}`}>
 
         <div onClick={toggleMenu} className={`${!menuOpen ? 'bg-[#ffd21d] text-white' : 'bg-transparent text-black border-b-2'} text-3xl font-bold h-full w-16 grid place-items-center hover:text-black hover:bg-white transition-all duration-500 border-r-2  border-black z-50`}>
-          <div>{menuOpen ? <CgClose /> :<RiMenu4Fill />}</div>
+          <div>{menuOpen ? <CgClose /> : <RiMenu4Fill />}</div>
         </div>
 
-      <Link to={'/'}> <div className='text-xl p-2 text-black font-bold h-full w-max grid place-items-center hover:text-[#fccb0d] transition-all duration-500 border-r-2 border-black text-center leading-none '>
+        <Link to={'/'}> <div className='text-xl p-2 text-black font-bold h-full w-max grid place-items-center hover:text-[#fccb0d] transition-all duration-500 border-r-2 border-black text-center leading-none '>
           {/* <div>Digtal<br/>Sponge.</div> */}
           <img src={logo} className='w-40 mix-blend-difference' alt="" />
         </div></Link>
@@ -35,10 +35,10 @@ const Navbar = () => {
 
       </div>
 
-      <div className='hidden md:grid px-10 border-l-2 border-black h-full w-40  place-items-center backdrop-blur-md font-semibold hover:bg-[#fccb0d] hover:text-white duration-500 transition-all'>
-        <p className=' '>PAY NOW
+      <div className='text-sm lg:text-md grid px-5 lg:px-10 border-l-2 border-black h-full w-30 lg:w-40  place-items-center backdrop-blur-md font-semibold hover:bg-[#fccb0d] hover:text-white duration-500 transition-all'>
+        <Link to={'/payment'}>    <p className=' '>PAY NOW
         </p>
-
+        </Link>
       </div>
       <AnimatePresence>
         {menuOpen && (
