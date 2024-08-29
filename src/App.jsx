@@ -40,6 +40,7 @@ import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor'
 import Loader from './components/Loader';
 import Payment from './Pages/Payment';
+import ContactForm from './Pages/Contact';
 
 const App = () => {
   const location = useLocation();
@@ -99,6 +100,23 @@ const App = () => {
                   >
                     <Payment />
                   </motion.div>
+                  
+                }
+              />
+              
+              <Route
+                key={3}
+                path="/contact"
+                element={
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 50 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <ContactForm />
+                  </motion.div>
+                  
                 }
               />
             </Routes>
