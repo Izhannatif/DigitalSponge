@@ -261,14 +261,6 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
   transition: transform 0.3s ease; /* Smoother sliding effect */
 }
 
-
-
-.service-card-pad:nth-child(){
-  margin-top: 20px;
-}
-
-
-
 .spinner-container {
   
   position: absolute;
