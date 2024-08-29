@@ -26,7 +26,7 @@ const ContactForm = () => {
                     Contact.
                 </div>
                 <div className='w-full flex flex-col md:flex-row justify-between mt-10'>
-                    <form name='contact' method='POST' data-netlify="true" netlify-honeypot="true" onSubmit={handleSubmit} className='w-full md:w-2/5 flex flex-col gap-5'>
+                    <form name='contact' method='POST' data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className='w-full md:w-2/5 flex flex-col gap-5'>
                         <div className='flex w-full justify-between'>
                         <div className='flex flex-col'>
                             <label htmlFor='name' className='text-xl font-semibold mb-2'>Name</label>
