@@ -26,30 +26,30 @@ const ContactForm = () => {
                     Contact.
                 </div>
                 <div className='w-full flex flex-col md:flex-row justify-between mt-10'>
-                    <form name='contact' method='POST' data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className='w-full md:w-2/5 flex flex-col gap-5'>
+                    <form name='contact' method='POST' data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className='w-full md:w-2/5 flex flex-col gap-5' netlify>
                         <div className='flex w-full justify-between'>
-                        <div className='flex flex-col'>
-                            <label htmlFor='name' className='text-xl font-semibold mb-2'>Name</label>
-                            <input
-                                type='text'
-                                id='name'
-                                name='name'
-                                value={formData.name}
-                                onChange={handleChange}
-                                className='p-3 text-xl rounded-lg border-2 border-[#1f1f1f] shadow-[4px_4px_0px_#1f1f1f] focus:outline-none'
-                            />
-                        </div>
-                        <div className='flex flex-col'>
-                            <label htmlFor='email' className='text-xl font-semibold mb-2'>Email</label>
-                            <input
-                                type='email'
-                                id='email'
-                                name='email'
-                                value={formData.email}
-                                onChange={handleChange}
-                                className='p-3 text-xl rounded-lg border-2 border-[#1f1f1f] shadow-[4px_4px_0px_#1f1f1f] focus:outline-none'
-                            />
-                        </div>
+                            <div className='flex flex-col'>
+                                <label htmlFor='name' className='text-xl font-semibold mb-2'>Name</label>
+                                <input
+                                    type='text'
+                                    id='name'
+                                    name='name'
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    className='p-3 text-xl rounded-lg border-2 border-[#1f1f1f] shadow-[4px_4px_0px_#1f1f1f] focus:outline-none'
+                                />
+                            </div>
+                            <div className='flex flex-col'>
+                                <label htmlFor='email' className='text-xl font-semibold mb-2'>Email</label>
+                                <input
+                                    type='email'
+                                    id='email'
+                                    name='email'
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className='p-3 text-xl rounded-lg border-2 border-[#1f1f1f] shadow-[4px_4px_0px_#1f1f1f] focus:outline-none'
+                                />
+                            </div>
                         </div>
                         <div className='flex flex-col'>
                             <label htmlFor='message' className='text-xl font-semibold mb-2'>Message</label>

@@ -105,7 +105,7 @@ a {
 .overlay-menu li {
   /* margin: 20px 0; */
   transition: all 0.3s ease;
-  padding: 35px 15px;
+  padding: 20px 15px;
 }
 
 .overlay-menu a,.overlay-menu p {
