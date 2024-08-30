@@ -18,7 +18,9 @@ const PortfolioSection = () => {
     useEffect(() => {
         loadImages(activeCategory);
     }, [activeCategory]);
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const loadImages = async (category) => {
         const basePath = `../assets/${category}`;
         let imgArray = [];
@@ -91,7 +93,7 @@ const PortfolioSection = () => {
                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center">
                         {images.slice(0, visibleItems).map((src, index) => (
                             <div key={index} className={`portfolio-item w-full md:h-[30vh] lg:h-[50vh] border-2 border-stone-900 rounded-sm shadow-[3px_3px_0px_#1f1f1f] hover:shadow-[5px_5px_0px_#1f1f1f] transition-all duration-300`}>
-                                <img className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
+                                <img loading='lazy' className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
                             </div>
                         ))}
                     </div>

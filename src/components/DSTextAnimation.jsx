@@ -34,7 +34,7 @@ const DSTextAnimation = () => {
         return () => clearInterval(intervalId);
     }, []);
     return (
-        <div className="animation-container fixed z-10 ">
+        <div className="animation-container fixed z-10 " id='home'>
             <div className="background bg-transition"></div>
             <div className="overlay"></div>
 

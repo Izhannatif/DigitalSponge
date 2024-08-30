@@ -459,3 +459,18 @@ transform: rotate(10deg) !important;
 .payment-option:nth-child(4){
   transform: rotate(-10deg) !important;
   }
+
+  .custom-toast {
+    background-color: #ffcc00;
+    color: #1f1f1f;
+}
+
+.custom-toast-success {
+    background-color: #ffcc00;
+    color: #1f1f1f;
+}
+
+.custom-toast-error {
+    background-color: #ffcc00;
+    color: #1f1f1f;
+}

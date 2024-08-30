@@ -76,7 +76,7 @@ const Testimonials = forwardRef((props, ref)  => {
     }, [ref]);
 
     return (
-        <section ref={ref} className="w-full py-20 text-[#1f1f1f] ">
+        <section id='#testimonials' ref={ref} className="w-full py-20 text-[#1f1f1f] ">
             <div className=" ">
                 {/* <h2 className="text-8xl font-extrabold text-[#facb0d] drop-shadow-[5px_5px_0px_#1a1a1a] " style={{ WebkitTextStroke: '2px #1f1f1f' }}>Testimonials</h2> */}
                 <span><img src={testimonialsHeading} className='w-full md:w-2/5' alt="" /></span>

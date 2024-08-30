@@ -1,30 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-
-// import './App.css'
-// import Navbar from './components/Navbar';
-// import DSTextAnimation from './components/DSTextAnimation';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import About from './components/About';
-// import ServicesSection from './components/Services';
-// import OurWork from './components/OurWork';
-// import PortfolioSection from './components/PortfolioSection';
-// import Contact from './components/Contact';
-// import Homepage from './Pages/Homepage';
-// function App() {
-//   return (
-//     <>
-//       <Router>
-//         <Navbar />
-//         <Routes>
-//         <Route path="/" exact Component={Homepage } />
-//           <Route path="/portfolio" Component={PortfolioSection } />
-//         </Routes>
-//       </Router>
-//     </>
-//   );
-// }
-
-// export default App
 
 
 import React, { useEffect, useState } from 'react';

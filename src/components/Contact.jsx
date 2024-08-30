@@ -85,34 +85,34 @@ const Contact = () => {
                 </div>
                 <div className='flex flex-col md:flex-row w-full justify-between items-start md:items-end gap-5 max-w-screen'>
                     <div className='flex w-full md:w-max gap-5 flex-wrap md:flex-nowrap'>
-                        <div className=' items-center flex w-max px-3 py-2 justify-between gap-3 text-lg md:text-xl font-bold border border-white rounded-full 
+                        <a target='_blank' href='https://www.linkedin.com/company/digital-sponge1/'><div className=' items-center flex w-max px-3 py-2 justify-between gap-3 text-lg md:text-xl font-bold border border-white rounded-full 
                     hover:text-[#ffcc00] hover:border-[#ffcc00] transition-all duration-300'>
                             LinkedIn
                             <FaLinkedinIn />
-                        </div>
-                        <div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                        </div></a>
+                        <a target='_blank' href='https://www.instagram.com/digitalsponge.us/'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Instagram
                             <FaInstagram />
-                        </div>
-                        <div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                        </div></a>
+                        <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Twitter
                             <FaXTwitter />
-                        </div>
+                        </div></a>
                     </div>
 
                     <div className='flex  w-full md:w-max gap-5 flex-wrap md:flex-nowrap'>
-                        <div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                    <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Threads
                             <FaThreads />
-                        </div>
-                        <div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                        </div></a>
+                        <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Whatsapp
                             <FaWhatsapp />
-                        </div>
-                        <div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                        </div></a>
+                        <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg md:text-xl font-bold border border-white rounded-full transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Facebook
                             <FaFacebookF />
-                        </div>
+                        </div></a>
                     </div>
                 </div>
 

@@ -53,7 +53,7 @@ const OurWork = forwardRef((props, sectionRef) => {
             variants={sectionVariants}
             transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-            <div className='flex flex-col md:flex-row justify-between items-center '>
+            <div id='work' className='flex flex-col md:flex-row justify-between items-center '>
                 {/* <p className='heading-text-bg drop-shadow-[4px_4px_0px_#1f1f1f] text-8xl text-[#fccb0d] font-extrabold py-10' style={{ WebkitTextStroke: '2px #1f1f1f' }}>WHAT WE DO</p> */}
                 <img src={whatwedo} alt="" className='w-full md:w-2/5 mt-20 md:mt-10' />
                 <Link to={'/portfolio'}>

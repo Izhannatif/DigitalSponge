@@ -6,6 +6,9 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { AiOutlineDeliveredProcedure } from "react-icons/ai";
 import { MdOutlineAnimation } from "react-icons/md";
 import sketch1 from '../assets/sketch-1.png'
+import sketch2 from '../assets/sketch-2.png'
+import sketch3 from '../assets/sketch-3.png'
+import sketch4 from '../assets/sketch-4.png'
 
 
 const Process = forwardRef((props, ref) => {
@@ -18,7 +21,7 @@ const Process = forwardRef((props, ref) => {
                 setIsProcessInView(entry.isIntersecting);
             },
             {
-                threshold: 0.3,
+                threshold: 0.2,
             }
         );
 
@@ -32,7 +35,7 @@ const Process = forwardRef((props, ref) => {
         };
     }, []);
     return (
-        <section ref={processRef} className={`max-w-screen w-full h-full  md:pl-24 pr-10 md:pr-20 ${isProcessInView ? 'bg-[#080808]' : 'bg-[#fff0] opacity-0'} backdrop-blur-sm py-16 text-white rounded-3xl bg-image-sponge transition-all duration-500`}>
+        <section id='process' ref={processRef} className={`max-w-screen w-full h-full  md:pl-24 pr-10 md:pr-20 ${isProcessInView ? 'bg-[#080808]' : 'bg-[#fff0] opacity-0'} backdrop-blur-sm py-16 text-white rounded-3xl bg-image-sponge transition-all duration-500`}>
             <div>
                 <p className='text-3xl md:text-7xl text-[#ffcc00] font-bold flex items-end pl-5 '>BEST SERVICES, RIGHT <br /> TIME, RIGHT PEOPLE <MdOutlineAnimation className='' /> </p>
             </div>
@@ -55,10 +58,12 @@ const Process = forwardRef((props, ref) => {
                         </div>
                         <p className='w-full md:w-1/2 text-xl'>We begin to plan an structure the project process based on the discovery phase before starting to jump into the design phase.</p>
                     </div>
-                    <div className='flex flex-col md:flex-row gap-5 md:gap-10 pt-5 px-0 md:px-20 item-start md:items-end'>
-                        <img src={sketch1} alt="" className='rounded-2xl w-44 h-44 object-cover object-top' />
-                        <img src="https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/zanoz/23tmmJohyrJca82hrUQsQWYmn6H1GDaSEC3b2Hww1eAsPBHM39cf6zGXA6enE7VfPxG7v.png" alt="" className='rounded-2xl w-44 h-44 object-cover object-top' />
-                        <img src="https://pm1.aminoapps.com/6628/c617d0f6e39424c9e47324996e6c58f76dae83e4_hq.jpg" alt="" className='rounded-2xl w-44 h-44 object-cover object-top' />
+                    <div className='flex flex-row flex-wrap gap-5 md:gap-10 pt-5 px-0 md:px-20 item-start md:items-end'>
+                        <img src={sketch1} alt="" className='rounded-2xl w-32 h-32 md:w-44 md:h-44 object-cover object-top' />
+                        <img src={sketch2} alt="" className='rounded-2xl w-32 h-32 md:w-44 md:h-44  object-cover object-top' />
+                        <img src={sketch3} alt="" className='rounded-2xl w-32 h-32 md:w-44 md:h-44  object-cover object-top' />
+                        <img src={sketch4} alt="" className='rounded-2xl w-32 h-32 md:w-44 md:h-44  object-cover object-top' />
+                        
                         <p>some of our ideas...</p>
                     </div>
 
