@@ -25,12 +25,12 @@ const Homepage = () => {
 
 
         <>
-            <DSTextAnimation  testimonialsRef={testimonialsRef} processRef={processRef} />
+            <DSTextAnimation/>
             <About/>
             {/* <ServicesSection ref={servicesRef} /> */}
             <OurWork />
-            <Process ref={processRef} />
-            <Testimonials ref={testimonialsRef} />
+            <Process/>
+            <Testimonials/>
             <FAQs />
         </>
 

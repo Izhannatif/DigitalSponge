@@ -188,7 +188,7 @@ const OurWork = () => {
                 <div className="w-full h-full p-10">
                     <ul className="text-2xl h-full flex flex-col justify-evenly font-bold lg:font-semibold">
                         {['Animations', 'Comics', 'Illustrations', 'Emotes'].map((item, index) => (
-                            <Link to={'/portfolio'} ><div
+                            <Link key={index} to={'/portfolio'} ><div
                                 className='group relative'
                                 key={index}
                                 id={`hovered-item-${index}`}
