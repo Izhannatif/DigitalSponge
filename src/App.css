@@ -475,3 +475,18 @@ transform: rotate(10deg) !important;
     color: #1f1f1f;
 }
 
+.group img:nth-child(even){
+  rotate: 10deg;
+  z-index: 100 !important;
+}
+
+.group img:nth-child(odd){
+  rotate: -10deg;
+  z-index: 100 !important;
+}
+
+
+.inverted-logo {
+  filter: invert(100%);
+}
+
