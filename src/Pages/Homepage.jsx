@@ -7,6 +7,7 @@ import OurWork from '../components/OurWork';
 import Testimonials from '../components/Testimonials';
 import Process from '../components/Process';
 import Loader from '../components/Loader';
+import FAQs from '../components/FAQs';
 
 const Homepage = () => {
     const servicesRef = useRef(null);
@@ -24,13 +25,13 @@ const Homepage = () => {
 
 
         <>
-            <DSTextAnimation servicesRef={servicesRef} aboutRef={aboutRef} ourWorkRef={ourWorkRef} testimonialsRef={testimonialsRef} processRef={processRef} />
-            <About ref={aboutRef} />
+            <DSTextAnimation  testimonialsRef={testimonialsRef} processRef={processRef} />
+            <About/>
             {/* <ServicesSection ref={servicesRef} /> */}
-            <OurWork ref={ourWorkRef} />
+            <OurWork />
             <Process ref={processRef} />
             <Testimonials ref={testimonialsRef} />
-
+            <FAQs />
         </>
 
     );

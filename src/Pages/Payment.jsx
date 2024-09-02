@@ -8,8 +8,8 @@ import Marquee from 'react-fast-marquee';
 
 const Payment = () => {
     const paymentOptions = [
-        { name: 'PayPal', icon: <FaPaypal color='#0070BA' />, color: '#0070BA', link: 'https://www.paypal.com/paypalme/digitalsponge1' },
-        { name: 'Stripe', icon: <FaStripeS color='#6772E5' />, color: '#6772E5', link: 'https://buy.stripe.com/28o00Cdct4Op8Tu6oo' },
+        { name: 'PayPal', icon: <FaPaypal color='#0070BA' />, color: '#0070BA', link: 'https://www.paypal.com/ncp/payment/HF6QBKGEC8CLW' },
+        { name: 'Stripe', icon: <FaStripeS color='#6772E5' />, color: '#6772E5', link: 'https://buy.stripe.com/dR67t40pH1Cd5Hi4gh' },
         { name: 'Venmo', icon: <BiLogoVenmo color='#3D95CE' />, color: '#3D95CE', link: '/' },
         { name: 'Cash App', icon: <SiCashapp color='#00C244' />, color: '#00C244', link: 'https://cash.app/$Muhajir0786' },
     ];

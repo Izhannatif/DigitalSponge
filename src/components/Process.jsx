@@ -59,10 +59,10 @@ const Process = forwardRef((props, ref) => {
                         <p className='w-full md:w-1/2 text-xl'>We begin to plan an structure the project process based on the discovery phase before starting to jump into the design phase.</p>
                     </div>
                     <div className='flex flex-row flex-wrap gap-5 md:gap-10 pt-5 px-0 md:px-20 item-start md:items-end'>
-                        <img src={sketch1} alt="" className='rounded-2xl w-32 h-32 md:w-44 md:h-44 object-cover object-top' />
-                        <img src={sketch2} alt="" className='rounded-2xl w-32 h-32 md:w-44 md:h-44  object-cover object-top' />
-                        <img src={sketch3} alt="" className='rounded-2xl w-32 h-32 md:w-44 md:h-44  object-cover object-top' />
-                        <img src={sketch4} alt="" className='rounded-2xl w-32 h-32 md:w-44 md:h-44  object-cover object-top' />
+                        <img src={sketch1} alt="" className='rounded-2xl w-32 h-32 md:w-56 md:h-56 object-cover object-top' />
+                        <img src={sketch2} alt="" className='rounded-2xl w-32 h-32 md:w-56 md:h-56 object-cover object-top' />
+                        <img src={sketch3} alt="" className='rounded-2xl w-32 h-32 md:w-56 md:h-56 object-cover object-top' />
+                        <img src={sketch4} alt="" className='rounded-2xl w-32 h-32 md:w-56 md:h-56 object-cover object-top' />
                         
                         <p>some of our ideas...</p>
                     </div>
