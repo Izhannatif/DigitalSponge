@@ -64,22 +64,22 @@ const Contact = () => {
 
                 <img src={letsConnect} className='w-full md:w-1/2' alt="" />
 
-                <div className='w-full flex flex-col md:flex-row justify-between pt-10 items-center gap-10 md:gap-0'>
+                <div className='w-full flex flex-col md:flex-row justify-center pt-10 items-center gap-10 md:gap-0'>
                     <div className='w-full md:w-2/5 flex justify-center items-start md:items-center flex-col gap-5'>
                         <div>
                             <p>Email us</p>
                             <p className='text-2xl md:text-4xl font-medium'>Info@DigitalSponge.us</p>
                         </div>
                     </div>
-                    <div className='w-full md:w-2/5 flex justify-center items-start md:items-center flex-col gap-5'>
+                    {/* <div className='w-full md:w-2/5 flex justify-center items-start md:items-center flex-col gap-5'>
                         <div>
                             <p>Give us a ring</p>
                             <p className='text-2xl md:text-4xl font-medium'>+1 (570) 609 2038</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
-                <div className='flex w-full md:w-1/5 justify-center items-center mb-10 md:-mb-10'>
+                <div className='flex w-full md:w-1/5 justify-center items-center mb-10 md:mb-10'>
                     <img src={logoIcon} className='w-1/3 md:w-1/2 pt-10 ' alt="" />
                     <img src={logoText} className='w-1/3 md:w-1/2 h-max pt-10 invert' alt="" />
                 </div>

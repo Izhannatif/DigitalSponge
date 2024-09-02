@@ -208,7 +208,7 @@ const PortfolioSection = () => {
                     ))}
                 </div>
                 <div className="portfolio-items w-full lg:w-4/5 pt-10 lg:pt-0 lg:pl-10">
-                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 place-items-center">
                         {images[activeCategory].map((src, index) => (
                             <div key={index} className={`portfolio-item w-full md:h-[30vh] lg:h-[50vh] rounded-sm transition-all duration-300`}>
                                 <img loading='lazy' className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
