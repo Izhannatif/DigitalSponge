@@ -15,11 +15,11 @@ const PortfolioSection = () => {
 
     const images = {
         Comics: [
-            '../assets/Comics/1.png',
-            '../assets/Comics/2.png',
-            '../assets/Comics/3.png',
-            '../assets/Comics/4.png',
-            '../assets/Comics/5.png',
+            '../assets/Comics/1.PNG',
+            '../assets/Comics/2.PNG',
+            '../assets/Comics/3.PNG',
+            '../assets/Comics/4.PNG',
+            '../assets/Comics/5.PNG',
             '../assets/Comics/6.png',
             '../assets/Comics/7.png',
             '../assets/Comics/8.png',
