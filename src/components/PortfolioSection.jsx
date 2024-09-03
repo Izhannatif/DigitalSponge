@@ -22,6 +22,8 @@ const PortfolioSection = () => {
             '../assets/Comics/5.png',
             '../assets/Comics/6.png',
             '../assets/Comics/7.png',
+            '../assets/Comics/8.png',
+            '../assets/Comics/9.png',
         ],
         Emotes: [
             '../assets/Emotes/1.png',
