@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import exploreHeading from '../assets/explore-heading.png';
 
 const categories = [
+    'Animations',
     'Comics',
     'Emotes',
     'Illustrations',
@@ -11,23 +12,30 @@ const categories = [
 ];
 
 const PortfolioSection = () => {
-    const [activeCategory, setActiveCategory] = useState('Comics');
+    const [activeCategory, setActiveCategory] = useState('Animations');
 
     const images = {
+        Animations: [
+            '/assets/Animations/1.mp4',
+            '/assets/Animations/2.mp4',
+            '/assets/Animations/3.mp4',
+            '/assets/Animations/4.mp4',
+        ],
+
         Comics: [
-            '../assets/Comics/1.PNG',
+            '/assets/Comics/1.PNG',
             '../assets/Comics/2.PNG',
             '../assets/Comics/3.PNG',
             '../assets/Comics/4.PNG',
             '../assets/Comics/5.PNG',
             '../assets/Comics/6.png',
-            '../assets/Comics/7.png',
+            '/assets/Comics/7.png',
             '../assets/Comics/8.png',
             '../assets/Comics/9.png',
         ],
         Emotes: [
-            '../assets/Emotes/1.png',
-            '../assets/Emotes/2.png',
+            '/assets/Emotes/1.png',
+            '/assets/Emotes/2.png',
             '../assets/Emotes/3.png',
             '../assets/Emotes/4.png',
             '../assets/Emotes/5.png',
@@ -95,7 +103,11 @@ const PortfolioSection = () => {
                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 place-items-center">
                         {images[activeCategory].map((src, index) => (
                             <div key={index} className={`portfolio-item w-full md:h-[30vh] lg:h-[50vh] rounded-sm transition-all duration-300`}>
-                                <img loading='lazy' className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
+                                {
+                                    activeCategory === 'Animations' ?
+                                    <video className='h-full w-full object-cover bg-black' muted loop autoPlay src={src} /> :
+                                    <img className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
+                                }
                             </div>
                         ))}
                     </div>
