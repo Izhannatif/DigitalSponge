@@ -83,9 +83,10 @@ const About = () => {
             <div className='flex flex-col gap-5 text-xl'>
                 <span><img src={introduction} className='w-full md:w-1/3' alt="Introduction" /></span>
                 <div className='flex flex-col md:flex-row gap-5 text-2xl w-full pl-10'>
-                    <p>About <span className='bg-[#ffcc00] p-1'><span className=' font-medium text-white drop-shadow-[1px_1px_2px_#1f1f1f] text-2xl p-1'>Digital Sponge</span></span></p>
+                    <p>About <span className='bg-[#ffcc00] p-1'><span className='text-nowrap font-medium text-white drop-shadow-[1px_1px_2px_#1f1f1f] text-2xl p-1'>Digital Sponge</span></span></p>
                     <p className='hidden md:block'>-</p>
-                    <p className='text-2xl w-full md:w-1/2'>A Team of Skillful and Passionate GFX Artists, Animators and Illustrators who aim to deliver the best art of all forms.</p>
+                    <p className='text-xl w-full '>At DigitalSponge, we bring imagination to life with stunning visuals and animations. From hand-drawn 2D illustrations to cutting-edge 3D modeling and animation, we create captivating designs that tell your story. Whether you need graphic design, Vtuber creation, or a unique blend of creativity and technology, our team is dedicated to transforming your ideas into art that inspires and engages. At DigitalSponge, we don’t just create visuals—we craft experiences that leave a lasting impression.
+                    </p>
                 </div>
             </div>
         </section>

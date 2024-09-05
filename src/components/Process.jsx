@@ -63,7 +63,7 @@
 //                         <img src={sketch2} alt="" className='rounded-2xl w-32 h-32 md:w-56 md:h-56 object-cover object-top' />
 //                         <img src={sketch3} alt="" className='rounded-2xl w-32 h-32 md:w-56 md:h-56 object-cover object-top' />
 //                         <img src={sketch4} alt="" className='rounded-2xl w-32 h-32 md:w-56 md:h-56 object-cover object-top' />
-                        
+
 //                         <p>some of our ideas...</p>
 //                     </div>
 
@@ -142,9 +142,10 @@ const Process = (props) => {
                 <div className='flex flex-col md:flex-row w-full justify-around p-5 md:p-10 items-start gap-2'>
                     <div className='flex flex-col md:flex-row gap-2 md:gap-10 w-full md:w-1/2'>
                         <GiAbstract089 className='h-10 w-10' color='#ffcc00' />
-                        <p className='text-2xl md:text-4xl font-bold'>UNDERSTANDING BRIEF</p>
+                        <p className='text-2xl md:text-4xl font-bold'>CREATIVE BRAINSTORM</p>
                     </div>
-                    <p className='w-full md:w-1/2 text-md md:text-xl'>The First Process is to understand the brief that has been sent by the client via online meet or chat and then the next process is the deal budget.</p>
+                    <p className='w-full md:w-1/2 text-md md:text-xl'>We kick things off by getting to know your vision and sparking creative ideas that align with your project.
+                    </p>
                 </div>
 
                 <hr className='w-[95%] border-stone-400 mt-5' />
@@ -152,9 +153,10 @@ const Process = (props) => {
                     <div className='flex flex-col md:flex-row w-full'>
                         <div className='flex flex-col md:flex-row gap-2 md:gap-10 w-full md:w-1/2'>
                             <GiBrainstorm className='h-10 w-10' color='#ffcc00' />
-                            <p className='text-2xl md:text-4xl font-bold'>BRAINSTORMING & RESEARCH</p>
+                            <p className='text-2xl md:text-4xl font-bold uppercase'>Sketch It Out</p>
                         </div>
-                        <p className='w-full md:w-1/2 text-xl'>We begin to plan and structure the project process based on the discovery phase before starting to jump into the design phase.</p>
+                        <p className='w-full md:w-1/2 text-xl'>Next, we hit the drawing board, crafting an initial draft that brings your concept to life.
+                        </p>
                     </div>
                     <div className='flex flex-row flex-wrap gap-5 md:gap-10 pt-5 px-0 md:px-20 items-start md:items-end'>
                         <img src={sketch1} alt="" className='rounded-2xl w-32 h-32 md:w-56 md:h-56 object-cover object-top' />
@@ -170,9 +172,9 @@ const Process = (props) => {
                     <div className='flex flex-col md:flex-row w-full justify-around p-5 md:p-10 items-start gap-2'>
                         <div className='flex flex-col md:flex-row gap-2 md:gap-10 w-full md:w-1/2'>
                             <MdOutlineDesignServices className='h-10 w-10' color='#ffcc00' />
-                            <p className='text-2xl md:text-4xl font-bold'>DESIGN PROCESS</p>
+                            <p className='text-2xl md:text-4xl font-bold uppercase'>Color & Approve</p>
                         </div>
-                        <p className='w-full md:w-1/2 text-md md:text-xl'>After completing the brainstorming & research process, we make low fidelity wireframes, and once approved, we proceed to high fidelity.</p>
+                        <p className='w-full md:w-1/2 text-md md:text-xl'>Love the initial draft? Awesome! We add color, shading, and all the magic touches once you give us the thumbs up.</p>
                     </div>
                 </div>
 
@@ -181,12 +183,15 @@ const Process = (props) => {
                     <div className='flex flex-col md:flex-row w-full justify-around p-5 md:p-10 items-start gap-2'>
                         <div className='flex flex-col md:flex-row gap-2 md:gap-10 w-full md:w-1/2'>
                             <AiOutlineDeliveredProcedure className='h-10 w-10' color='#ffcc00' />
-                            <p className='text-2xl md:text-4xl font-bold'>DELIVER & PAYMENT</p>
+                            <p className='text-2xl md:text-4xl font-bold uppercase'>Final Touch & Delivery</p>
                         </div>
-                        <p className='w-full md:w-1/2 text-md md:text-xl'>After the low and high fidelity designs go through the feedback process and are finalized, the final files are delivered to the client upon payment.</p>
+                        <p className='w-full md:w-1/2 text-md md:text-xl'>With your approval, we wrap things up and hand over your completed masterpiece, ready to impress! Pay worrilessly and seamlessly using Paypal , Stripe, Wise , Cash app. 
+                        </p>
                     </div>
                 </div>
+                
             </div>
+            <p className='p-10 text-xl'>At <span className='text-[#fde000]'>DigitalSponge, </span>we make the  process smooth, fun, and all about bringing your ideas to life!</p>
         </section>
     );
 }
