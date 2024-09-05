@@ -125,6 +125,8 @@ import exploreHeading from '../assets/explore-heading.png';
 import sponge from '../assets/sponge.png'; // Make sure the path to your sponge image is correct
 
 const categories = [
+    '3D Animation',
+    '3D Model',
     'Animations',
     'Comics',
     'Emotes',
@@ -139,6 +141,12 @@ const PortfolioSection = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const images = {
+        '3D Animation': [
+            '/assets/3D/Dragon.mp4',
+        ],
+        '3D Model': [
+            '/assets/3D/fullbody.jpg',
+        ],
         Animations: [
             '../assets/Animations/1.mp4',
             '../assets/Animations/2.mp4',
@@ -238,35 +246,35 @@ const PortfolioSection = () => {
                 <div className="portfolio-items w-full lg:w-4/5 pt-10 lg:pt-0 lg:pl-10">
                     {isLoading ? (
                         <div className='absolute left-1/2 top-3/4 place-items-center'>
-                        <div className="spinner-container justify-center items-center place-items-center grid">
-                            <div className="spinner">
-                                <svg viewBox="0 0 100 100">
-                                    <path
-                                        id="circlePath"
-                                        d="M50,10 a40,40 0 1,1 0,80 a40,40 0 1,1 0,-80"
-                                        fill="transparent"
-                                    />
-                                    <text>
-                                        <textPath xlinkHref="#circlePath" startOffset="0%">
-                                            digital • sponge • digital • sponge • digital • sponge •
-                                        </textPath>
-                                    </text>
-                                </svg>
-                                <div className="sponge-image">
-                                    <img src={sponge} alt="Sponge" />
+                            <div className="spinner-container justify-center items-center place-items-center grid">
+                                <div className="spinner">
+                                    <svg viewBox="0 0 100 100">
+                                        <path
+                                            id="circlePath"
+                                            d="M50,10 a40,40 0 1,1 0,80 a40,40 0 1,1 0,-80"
+                                            fill="transparent"
+                                        />
+                                        <text>
+                                            <textPath xlinkHref="#circlePath" startOffset="0%">
+                                                digital • sponge • digital • sponge • digital • sponge •
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    <div className="sponge-image">
+                                        <img src={sponge} alt="Sponge" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     ) : (
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 place-items-center">
                             {images[activeCategory].map((src, index) => (
                                 <div key={index} className={`portfolio-item w-full md:h-[30vh] lg:h-[50vh] rounded-sm transition-all duration-300`}>
-                                    {activeCategory === 'Animations' ? (
+                                    {activeCategory === 'Animations' || activeCategory === 'Animation3D' ? (
                                         <video className='h-full w-full object-cover' muted loop autoPlay src={src} />
                                     ) : (
-                                        <img className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
-                                    )}
+                                            <img className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
+                                        )}
                                 </div>
                             ))}
                         </div>
