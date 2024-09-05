@@ -137,12 +137,12 @@ const categories = [
 ];
 
 const PortfolioSection = () => {
-    const [activeCategory, setActiveCategory] = useState('Comics');
+    const [activeCategory, setActiveCategory] = useState('Animations');
     const [isLoading, setIsLoading] = useState(false);
 
     const images = {
         '3D Animation': [
-            '/assets/3D/Dragon.mp4',
+            '../assets/3D/5.mp4',
         ],
         '3D Model': [
             '/assets/3D/fullbody.jpg',
@@ -152,6 +152,8 @@ const PortfolioSection = () => {
             '../assets/Animations/2.mp4',
             '../assets/Animations/3.mp4',
             '../assets/Animations/4.mp4',
+            '../assets/Animations/5.mp4',
+            
         ],
         Comics: [
             '../assets/Comics/1.PNG',
@@ -270,7 +272,7 @@ const PortfolioSection = () => {
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 place-items-center">
                             {images[activeCategory].map((src, index) => (
                                 <div key={index} className={`portfolio-item w-full md:h-[30vh] lg:h-[50vh] rounded-sm transition-all duration-300`}>
-                                    {activeCategory === 'Animations' || activeCategory === 'Animation3D' ? (
+                                    {activeCategory === 'Animations' || activeCategory === '3D Animation' ? (
                                         <video className='h-full w-full object-cover' muted loop autoPlay src={src} />
                                     ) : (
                                             <img className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
