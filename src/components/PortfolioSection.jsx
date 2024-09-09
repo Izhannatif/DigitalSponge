@@ -395,6 +395,7 @@ const PortfolioSection = () => {
                     video={{
                         controls: true, // Show video controls if needed
                         autoplay: true, // Attempt to autoplay
+                        playsInline:true,
                     }}
                 />
             )}
