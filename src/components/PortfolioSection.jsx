@@ -151,7 +151,7 @@ const PortfolioSection = () => {
                             {images[activeCategory].map((src, index) => (
                                 <div key={index} className={`portfolio-item w-full md:h-[30vh] lg:h-[50vh] rounded-sm transition-all duration-300`}>
                                     {activeCategory === 'Animations' || activeCategory === '3D Animation' ? (
-                                        <video className='h-full w-full object-cover' muted loop autoPlay src={src} />
+                                        <video className='h-full w-full object-cover' muted loop autoPlay playsInLine src={src} />
                                     ) : (
                                             <img className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[3s]`} src={src} alt={`Project ${index + 1}`} />
                                         )}
