@@ -22,7 +22,9 @@ const Contact = () => {
         email: '',
         message: '',
     });
-
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top on component mount
+    }, []);
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -80,10 +82,10 @@ const Contact = () => {
                 </div>
 
                 <div className='flex w-full md:w-1/5 justify-center items-center mb-10 md:mb-10'>
-                    <img src={logoIcon} className='w-1/3 md:w-1/2 pt-10 ' alt="" />
-                    <img src={logoText} className='w-1/3 md:w-1/2 h-max pt-10 invert' alt="" />
+                    <img src={logoIcon} className='w-1/3 md:w-1/2 pt-10 object-contain ' alt="" />
+                    <img src={logoText} className='w-1/3 md:w-1/2 h-max pt-10 invert object-contain' alt="" />
                 </div>
-                <div className='flex flex-col md:flex-row w-full justify-between items-start md:items-end gap-5 max-w-screen'>
+                <div className='flex flex-col md:flex-row w-full justify-between items-start md:items-end gap-5 max-w-screen flex-wrap'>
                     <div className='flex w-full md:w-max gap-5 flex-wrap md:flex-nowrap'>
                         <a target='_blank' href='https://www.linkedin.com/company/digital-sponge1/'><div className=' items-center flex w-max px-3 py-2 justify-between gap-3 text-lg md:text-xl font-bold border border-white rounded-full 
                     hover:text-[#ffcc00] hover:border-[#ffcc00] transition-all duration-300'>

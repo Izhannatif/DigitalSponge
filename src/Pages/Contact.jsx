@@ -10,7 +10,9 @@ const ContactForm = () => {
         email: '',
         message: '',
     });
-
+    useEffect(() => {
+        window.scrollTo(-100, -100); // Scroll to top on component mount
+    }, []);
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
