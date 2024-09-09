@@ -79,7 +79,7 @@ const About = () => {
     }, []);
 
     return (
-        <section id='about' ref={sectionRef} className='text-black py-10 px-8 h-[40vh] flex flex-col md:flex-row items-center about-section w-full'>
+        <section id='about' ref={sectionRef} className='text-black py-10 px-8 h-[60vh] flex flex-col md:flex-row items-center about-section w-full'>
             <div className='flex flex-col gap-5 text-xl'>
                 <span><img src={introduction} className='w-full md:w-1/3' alt="Introduction" /></span>
                 <div className='flex flex-col md:flex-row gap-5 text-2xl w-full pl-10'>

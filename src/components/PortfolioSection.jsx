@@ -396,6 +396,10 @@ const PortfolioSection = () => {
                     on={{
                         click: () => setIsOpen(false),
                     }}
+                    video={{
+                        controls: true, // Show video controls if needed
+                        autoplay: true, // Attempt to autoplay
+                    }}
                 />
             )}
         </div>

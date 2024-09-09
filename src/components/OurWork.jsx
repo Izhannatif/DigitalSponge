@@ -75,7 +75,7 @@ const OurWork = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
         >
             <div id='work' className='flex flex-col md:flex-row justify-between items-center'>
-                <img src={whatwedo} alt="What We Do" className='w-full md:w-2/5 mt-20 md:mt-10' />
+                <img src={whatwedo} alt="What We Do" className='w-11/12 md:w-2/5 mt-20 md:mt-10' />
                 <Link to={'/portfolio'}>
                     <button className='hidden md:block text-lg font-semibold px-4 py-3 bg-[#facb0d] mt-10 border border-black drop-shadow-[4px_4px_0px_#1f1f1f] hover:drop-shadow-[1px_1px_0px_#1f1f1f] transition-all duration-200 md:mr-10' style={{ WebkitTextStroke: '0px #1f1f1f', textShadow: 'none' }}>
                         Explore Full Portfolio
