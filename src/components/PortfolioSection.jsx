@@ -252,8 +252,6 @@ const PortfolioSection = () => {
             { type: 'image', src: '../assets/Comics/7.PNG' },
             { type: 'image', src: '../assets/Comics/8.PNG' },
             { type: 'image', src: '../assets/Comics/9.PNG' },
-
-            // Add more images similarly...
         ],
         Emotes: [
             { type: 'image', src: '../assets/Emotes/1.png' },
@@ -263,7 +261,6 @@ const PortfolioSection = () => {
             { type: 'image', src: '../assets/Emotes/5.png' },
             { type: 'image', src: '../assets/Emotes/6.png' },
             { type: 'image', src: '../assets/Emotes/7.png' },
-            // Add more images similarly...
         ],
         Illustrations:[
             { type: 'image', src: '../assets/Illustrations/1.png' },
@@ -300,8 +297,7 @@ const PortfolioSection = () => {
             { type: 'image', src: '../assets/Twitch/3.png' },
             { type: 'image', src: '../assets/Twitch/4.png' },
             { type: 'image', src: '../assets/Twitch/5.png' },
-        ]
-        // Add similar mappings for other categories...
+        ],
     };
 
     useEffect(() => {
@@ -344,7 +340,7 @@ const PortfolioSection = () => {
                 </div>
                 <div className="portfolio-items w-full lg:w-4/5 pt-10 lg:pt-0 lg:pl-10">
                     {isLoading ? (
-                        <div className='absolute left-1/2 top-3/4 place-items-center'>
+                        <div className='absolute top-1/2 left-28 p-2 md:left-1/2 md:top-3/4 place-items-center'>
                             <div className="spinner-container justify-center items-center place-items-center grid">
                                 <div className="spinner">
                                     <svg viewBox="0 0 100 100">
