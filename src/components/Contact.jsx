@@ -1,17 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BsSend } from 'react-icons/bs';
 import letsConnect from '../assets/lets-connect-heading.png'
 import logoIcon from '../assets/logos/logo-icon.png'
 import logoText from '../assets/logos/logo-text.png'
-import { LiaLinkedin } from 'react-icons/lia';
-import { FaLinkedin, FaThreads, FaX, FaXTwitter } from 'react-icons/fa6';
-import { FcIdea } from "react-icons/fc";
-
-import logo from '../assets/logos/4-2.png'
-
-import { FaFacebook, FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
-import { BiBrush } from 'react-icons/bi';
-import { GiPaintBrush } from "react-icons/gi";
+import {FaThreads, FaXTwitter } from 'react-icons/fa6';
+import {FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 
 
 const Contact = () => {
@@ -38,13 +30,14 @@ const Contact = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
+                console.log('Contact in view:', entry.isIntersecting); // Check if this logs correctly
                 setIsContactInView(entry.isIntersecting);
             },
             {
-                threshold: 0.3,
+                threshold: 0.1,
             }
         );
-
+    
         if (contactRef.current) {
             observer.observe(contactRef.current);
         }
@@ -54,14 +47,13 @@ const Contact = () => {
             }
         };
     }, []);
-
     return (
         <section ref={contactRef} className='flex flex-col justify-center items-center max-w-screen'>
             {/* <div className='pb-10 text-8xl font-black uppercase text-center tracking-tight text-white py-10 '>
                 Turning <br /> <span className='flex text-9xl items-start text-[#ffd426] drop-shadow-[5px_5px_0px_#1f1f1f]'>Imagination<FcIdea className='drop-shadow-2xl' /></span>Into<div className='flex justify-center z-10 bangers tracking-wider text-[20vh]'> Ar <span className='text-[#ffcc00] drop-shadow-[3px_3px_0px_#1f1f1f]'>t</span> <GiPaintBrush className=' rotate-180 drop-shadow-[3px_-3px_0px_#1f1f1f] z-0' color='#ffcc00' /> </div>
             </div> */}
             <div className={`${isContactInView ? 'text-[#fff] bg-[#000000f1]' :
-                'translate-y-[100%] opacity-0 bg-white'} 
+                ' bg-white'} 
                 w-full md:rounded-[10rem] md:rounded-b-none transition-all duration-500 px-5 md:px-20 py-10 items-center justify-between flex flex-col`}>
 
                 <img src={letsConnect} className='w-full md:w-1/2' alt="" />
