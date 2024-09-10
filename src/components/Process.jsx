@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState, memo, forwardRef } from 'react';
 import { GiAbstract089, GiBrainstorm } from "react-icons/gi";
 import { MdOutlineDesignServices, MdOutlineAnimation } from "react-icons/md";
 import { AiOutlineDeliveredProcedure } from "react-icons/ai";
-import sketch1 from '../assets/sketch-1.png';
-import sketch2 from '../assets/sketch-2.png';
-import sketch3 from '../assets/sketch-3.png';
-import sketch4 from '../assets/sketch-4.png';
+import sketch1 from '../assets/sketch-1.webp';
+import sketch2 from '../assets/sketch-2.webp';
+import sketch3 from '../assets/sketch-3.webp';
+import sketch4 from '../assets/sketch-4.webp';
 
 // Memoized component to prevent unnecessary re-renders
 const ProcessSection = memo(forwardRef(({ isProcessInView }, ref) => (
