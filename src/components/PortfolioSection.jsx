@@ -177,7 +177,7 @@ const PortfolioSection = () => {
                                     {item.type === 'video' ? (
                                         <video className='h-full w-full object-cover' muted loop autoPlay playsInline src={item.src} preload='none' />
                                     ) : (
-                                        <img className={`h-full w-full object-cover object-top hover:object-bottom transition-all duration-[1.5s]`} src={item.src} alt={`Project ${index + 1}`} 
+                                        <img className={`h-full w-full object-cover object-top`} src={item.src} alt={`Project ${index + 1}`} 
                                         loading='lazy'
                                         />
                                     )}
