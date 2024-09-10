@@ -215,7 +215,7 @@ import sketch4 from '../assets/sketch-4.png';
 
 // Memoized component to prevent unnecessary re-renders
 const ProcessSection = memo(forwardRef(({ isProcessInView }, ref) => (
-    <section id='process' ref={ref} className={`max-w-screen w-full h-full md:pl-24 pr-10 md:pr-20 ${isProcessInView ? 'bg-[#080808]' : 'bg-[#fff0] opacity-0'} backdrop-blur-sm py-16 text-white rounded-3xl bg-image-sponge transition-all duration-100`}>
+    <section id='process' ref={ref} className={`max-w-screen w-full h-full md:pl-24 pr-10 md:pr-20 ${isProcessInView ? 'bg-[#080808]' : 'bg-[#fff0] opacity-20'} backdrop-blur-sm py-16 text-white rounded-3xl bg-image-sponge transition-all duration-100`}>
         <div>
             <p className='text-3xl md:text-7xl text-[#ffcc00] font-bold flex items-end pl-5'>BEST SERVICES, RIGHT <br /> TIME, RIGHT PEOPLE <MdOutlineAnimation className='' /> </p>
         </div>
