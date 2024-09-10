@@ -36,7 +36,6 @@ html{
 
 body {
   cursor: none !important;
-
   font-family: 'Urbanist', sans-serif;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -48,7 +47,7 @@ body {
   background-blend-mode: overlay, overlay, multiply;
   background-size: 200px 200px, 200px 200px, contain;
 
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 a {
