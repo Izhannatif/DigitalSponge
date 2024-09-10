@@ -27,7 +27,6 @@ const Homepage = () => {
         <>
             <DSTextAnimation/>
             <About/>
-            {/* <ServicesSection ref={servicesRef} /> */}
             <OurWork />
             <Process/>
             <Testimonials/>

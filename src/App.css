@@ -6,14 +6,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* src/App.css or src/components/ServicesSection.css */
-
 
 #root {
-  
   margin: 0 auto;
   user-select: none;
   scroll-behavior: smooth;
+}
+
+html{
+  scroll-behavior: smooth !important;
 }
 
 ::-webkit-scrollbar {
@@ -34,17 +35,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #e0b508;
 }
-
-/* body {
- 
-  font-family: 'urbanist';
-  overflow-x: hidden;
-  background-color: #ffffff;
- 
-  background-size: 200px 200px;
-  cursor: none !important;
-  background-attachment: fixed;
-} */
 
 body {
   cursor: none !important;
@@ -83,14 +73,10 @@ a {
   position: fixed;
   pointer-events: none;
   z-index: 1000;
-  /* transform: rotate(20deg) !important; */
   transform: translate(-50%, -50%) !important;
   transition: transform 2s ease-out;
   transition: transform 0.2s ease-out, width 0.2s, height 0.2s;
-  
-
 }
-
 .custom-cursor.hover {
   width: 48px;
   height: 48px;
@@ -191,23 +177,11 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-
-  /* background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.773546918767507) 100%); */
 }
-
-/* src/components/ServicesSection.css */
-
-
-
-
-
 .service-card {
   position: relative;
   overflow: hidden;
-  /* Ensures that the pseudo-element does not overflow the card */
 }
-
 .service-card::before {
   content: '';
   position: absolute;
@@ -216,68 +190,47 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
   right: 0;
   height: 0;
   background-color: #fef08a;
-  /* Adjust the background color as needed */
   z-index: 0;
-  /* Ensure it stays behind the text */
   transition: height 0.7s ease-in-out;
-  /* Smooth transition */
 }
-
 .service-card:hover::before {
   height: 100%;
-  /* Expand the background to cover the entire card */
 }
-
 .service-card:hover .service-title {
   color: white !important;
 }
-
 .service-card>* {
   position: relative;
   z-index: 1;
-  /* Ensure the text and other content stay above the background */
 }
-
 .fade-in {
   opacity: 1;
 }
-
 .fade-out {
   opacity: 0;
 }
-
 .transition-opacity {
   transition: opacity 1s ease-in-out;
 }
-
-
 .slick-track {
   display: flex;
   gap: 20px; /* Adjust the gap to create space between slides */
   transition: transform 0.3s ease; /* Smoother transition */
 }
-
 .slick-slide {
   transition: transform 0.3s ease; /* Smoother sliding effect */
 }
-
 .spinner-container {
-  
   position: absolute;
   display: flex;
-  /* bottom: 50%;
-  right: 50%; */
   justify-content: center;
   align-items: center;
 }
-
-
 .spinner {
   position: relative;
   width: 150px;
   height: 150px;
 }
-
 .spinner svg {
   position: absolute;
   top: 0;
@@ -325,29 +278,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
       transform: rotate(0deg);
   }
 }
-/* 
-.spinner-container {
-  position: absolute;
-  display: flex;
-  bottom: 100px;
-  right: 100px;
-  transition: transform 1s ease-in-out;
-}
-
-.move-to-about {
-  transform: translate(-135%, calc(50vh + 100%));
-}
-
-.move-to-services {
-  transform: translate(0, calc(250vh + 300px)); 
-}
-
- */
-
  .spinner-container {
-  /* position: absolute; */
-  /* right: 45%;
-  bottom: 50%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -367,41 +298,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
 }
-
-/* .move-to-about {
-  transform: translate(00%, calc(110vh));
-}
-
-.move-to-services {
- transform: translate(-270%, calc(65vh ));
-}
-
-.move-to-work{
-  transform: translate(-300%, calc(135vh ));
-}
-
-.move-to-testimonials{
-  transform: translate(-130%, calc(160vh ));
-}
-
-.move-to-process{
-  transform: translate(-130%, calc(350vh ));
-} */
-
-
-/* .bg-image-sponge{
-  background-image: url('./assets/sponge.png');
-  background-size: 100vw 100vh;
-  background-blend-mode: overlay;
-  
-  background-repeat: no-repeat;
-} */
-
-
 .testimonial-card{
   position: relative;
   overflow: hidden;
-  
 }
 .testimonial-card::before {
   content: '';
@@ -415,20 +314,15 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
   background-size: cover;
   background-repeat: no-repeat;
   filter: blur(20px) grayscale(80%);
-  
-  z-index: -1; /* Make sure the background is behind the content */
-  opacity: 0.5; /* Adjust opacity if needed */
+  z-index: -1;
+  opacity: 0.5;
 }
-
 .lobster{
   font-family: 'lobster' !important;
 }
-
 .bangers{
   font-family: 'bangers';
 }
-
-
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -442,50 +336,26 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.77
   align-items: center;
   z-index: 1000;
 }
-
-
 .payment-option:nth-child(1){
 transform: rotate(10deg) !important;
 }
-
 .payment-option:nth-child(2){
   transform: rotate(-10deg) !important;
   }
-  
 .payment-option:nth-child(3){
   transform: rotate(10deg) !important;
-  }
-  
+  } 
 .payment-option:nth-child(4){
   transform: rotate(-10deg) !important;
   }
-
-  .custom-toast {
-    background-color: #ffcc00;
-    color: #1f1f1f;
-}
-
-.custom-toast-success {
-    background-color: #ffcc00;
-    color: #1f1f1f;
-}
-
-.custom-toast-error {
-    background-color: #ffcc00;
-    color: #1f1f1f;
-}
-
 .group img:nth-child(even){
   rotate: 10deg;
   z-index: 100 !important;
 }
-
 .group img:nth-child(odd){
   rotate: -10deg;
   z-index: 100 !important;
 }
-
-
 .inverted-logo {
   filter: invert(100%);
 }

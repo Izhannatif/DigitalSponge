@@ -24,7 +24,9 @@
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
+    "react-window": "^1.8.10",
     "slick-carousel": "^1.8.1",
+    "smooth-scrollbar": "^8.8.4",
     "yet-another-react-lightbox": "^3.21.4"
   },
   "devDependencies": {
