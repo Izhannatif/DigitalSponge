@@ -59,10 +59,14 @@ const Contact = () => {
                 <img src={letsConnect} className='w-full md:w-1/2' alt="" />
 
                 <div className='w-full flex flex-col md:flex-row justify-center pt-10 items-center gap-10 md:gap-0'>
-                    <div className='w-full md:w-2/5 flex justify-center items-start md:items-center flex-col gap-5'>
+                    <div className='w-full  flex justify-between items-center md:items-center gap-5'>
                         <div>
                             <p>Email us</p>
                             <p className='text-2xl md:text-4xl font-medium'>Info@DigitalSponge.us</p>
+                        </div>
+                        <div>
+                            <p>Address</p>
+                            <p className='text-lg font-medium'>701 Thoma St, Reno, Nevada 89502</p>
                         </div>
                     </div>
                     {/* <div className='w-full md:w-2/5 flex justify-center items-start md:items-center flex-col gap-5'>
