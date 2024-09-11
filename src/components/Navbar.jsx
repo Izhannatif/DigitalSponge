@@ -142,7 +142,7 @@ import SpongeGame from './SpongeGame';
                   </li>
                 </ul>
               </div>
-              <div className='w-1/2'>
+              <div className='hidden md:block w-1/2'>
               <SpongeGame />
               </div>
             </motion.div>
