@@ -1,87 +1,3 @@
-// import React from 'react'
-
-// const FAQs = () => {
-//     return (
-//         <section class="py-10  sm:py-16 lg:py-24">
-//             <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-//                 <div class="max-w-2xl mx-auto text-center">
-//                     <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Frequently Asked Questions</h2>
-//                     <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do</p>
-//                 </div>
-
-//                 <div class="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
-//                     <div class="transition-all duration-200 bg-[#ffffffb4] border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
-//                         <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
-//                             <span class="flex text-lg font-semibold text-black"> How to create an account? </span>
-
-//                             <svg class="w-6 h-6 text-gray-400 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-//                             </svg>
-//                         </button>
-
-//                         <div class="px-4 pb-5 sm:px-6 sm:pb-6">
-//                             <p>Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.</p>
-//                         </div>
-//                     </div>
-
-//                     <div class="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50">
-//                         <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
-//                             <span class="flex text-lg font-semibold text-black"> How can I make payment using Paypal? </span>
-
-//                             <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-//                             </svg>
-//                         </button>
-
-//                         <div class="hidden px-4 pb-5 sm:px-6 sm:pb-6">
-//                             <p>Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.</p>
-//                         </div>
-//                     </div>
-
-//                     <div class="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50">
-//                         <div class="">
-//                             <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
-//                                 <span class="flex text-lg font-semibold text-black"> Can I cancel my plan? </span>
-
-//                                 <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-//                                 </svg>
-//                             </button>
-
-//                             <div class="hidden px-4 pb-5 sm:px-6 sm:pb-6">
-//                                 <p>Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.</p>
-//                             </div>
-//                         </div>
-//                     </div>
-
-//                     <div class="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50">
-//                         <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
-//                             <span class="flex text-lg font-semibold text-black"> How can I reach to support? </span>
-
-//                             <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-//                             </svg>
-//                         </button>
-
-//                         <div class="hidden px-4 pb-5 sm:px-6 sm:pb-6">
-//                             <p>Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.</p>
-//                         </div>
-//                     </div>
-//                 </div>
-
-//                 <p class="text-center text-gray-600 textbase mt-9">Didn’t find the answer you are looking for? <a href="#" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">Contact our support</a></p>
-//             </div>
-//         </section>
-
-//     )
-// }
-
-// export default FAQs
-
-
-
-
-
 import React, { useState } from 'react';
 
 const FAQs = () => {
@@ -93,20 +9,28 @@ const FAQs = () => {
 
     const faqItems = [
         {
-            question: 'How to create an account?',
-            answer: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.'
+            question: 'What services do you offer?',
+            answer: 'At DigitalSponge, we bring your ideas to life! Whether you need captivating 2D visuals, immersive 3D designs, or sleek and intuitive UI/UX for websites and apps, we’ve got you covered. Your creative vision is in expert hands!'
         },
         {
-            question: 'How can I make payment using Paypal?',
-            answer: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.'
+            question: 'How do I start a project with you?',
+            answer: 'Getting started is easy! Just drop us a line via email, phone, or WhatsApp, and we’ll get back to you with all the details you need, including a personalized guide and pricing options.'
         },
         {
-            question: 'Can I cancel my plan?',
-            answer: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.'
+            question: 'What is your typical project timeline?',
+            answer: 'Timelines vary depending on the complexity of your idea. Share your vision with us, and we’ll provide a detailed deadline specific to your project.'
         },
         {
-            question: 'How can I reach support?',
-            answer: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.'
+            question: 'How do you price your services?',
+            answer: 'Our pricing is as unique as your project! Every quote is tailored based on your specific requirements to ensure you get the best value for your investment.'
+        },
+        {
+            question: 'Can I request revisions to the project?',
+            answer: 'Absolutely! At DigitalSponge, we’re dedicated to bringing your vision to life. We welcome your feedback and are more than happy to make changes along the way.'
+        },
+        {
+            question: 'Do you offer custom packages?',
+            answer: 'Yes, we do! Whether you need a single service or a bundle, just reach out to us via email, WhatsApp, phone, or social media, and we’ll create the perfect package for your needs.'
         }
     ];
 
@@ -114,7 +38,7 @@ const FAQs = () => {
         <section className="pt-5 sm:pt-8 lg:pt-10 pb-10 sm:pb-16 lg:pb-20 ">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold leading-tight text-[#fde000] drop-shadow-[3px_3px_0px_#1f1f1f] sm:text-4xl lg:text-5xl " style={{WebkitTextStroke:'1px black'}}>Frequently Asked Questions</h2>
+                    <h2 className="text-3xl font-bold leading-tight text-[#fde000] drop-shadow-[3px_3px_0px_#1f1f1f] sm:text-4xl lg:text-5xl " style={{ WebkitTextStroke: '1px black' }}>Frequently Asked Questions</h2>
                     <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Find the answers to the most common questions below.</p>
                 </div>
 
@@ -123,16 +47,14 @@ const FAQs = () => {
                         <div
                             key={index}
                             onClick={() => toggleFAQ(index)}
-                            className={`transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer rounded-3xl w-full ${
-                                activeIndex === index ? 'bg-[#fde000] ' : ''
-                            }`}
+                            className={`transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer rounded-3xl w-full ${activeIndex === index ? 'bg-[#fde000] ' : ''
+                                }`}
                         >
                             <button type="button" className="flex items-center justify-between w-full px-4 py-5 sm:p-6">
-                                <span className="flex text-lg font-semibold text-black">{item.question}</span>
+                                <span className="flex text-xl font-semibold text-black">{item.question}</span>
                                 <svg
-                                    className={`w-6 h-6 transition-transform duration-200 ${
-                                        activeIndex === index ? 'rotate-180' : 'rotate-0'
-                                    }`}
+                                    className={`w-6 h-6 transition-transform ease-out duration-500 ${activeIndex === index ? 'rotate-180' : 'rotate-0'
+                                        }`}
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -143,13 +65,12 @@ const FAQs = () => {
                             </button>
 
                             <div
-                                className={`overflow-hidden transition-all duration-200 ${
-                                    activeIndex === index ? 'max-h-96 ease-in' : 'max-h-0 ease-out'
-                                }`}
+                                className={`overflow-hidden transition-all ease-in duration-500 ${activeIndex === index ? 'max-h-96 ease-in' : 'max-h-0 ease-out'
+                                    }`}
                             >
-                                <div className="px-4 pb-5 sm:px-6 sm:pb-6">
+                                <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-lg">
                                     <p className="">
-                                        {item.answer} <a href="#" title="" className="text-blue-600 transition-all duration-200 hover:underline">Learn more</a>.
+                                        {item.answer}
                                     </p>
                                 </div>
                             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { BsSend } from 'react-icons/bs';
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,7 +11,7 @@ const ContactForm = () => {
         message: '',
     });
     useEffect(() => {
-        window.scrollTo(-100, -100); // Scroll to top on component mount
+        window.scrollTo(0, 0); // Scroll to top on component mount
     }, []);
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -55,7 +55,7 @@ const ContactForm = () => {
 
     return (
         <>
-            <section className="flex flex-col items-center pt-20 z-20 w-full">
+            <section className="flex flex-col items-center pt-20 z-20 w-full h-screen justify-center">
                 <div className={`w-full rounded-[150px] rounded-b-none transition-all duration-500 px-8 md:px-20 py-10 pb-16 items-center`}>
                     <div className='text-center md:text-left text-6xl md:text-8xl text-[#ffcc00] font-bold drop-shadow-[4px_4px_0px_#1f1f1f]'
                         style={{ WebkitTextStroke: '1px #1f1f1f' }}
