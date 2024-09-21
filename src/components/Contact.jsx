@@ -83,11 +83,11 @@ const Contact = () => {
                 </div>
                 <div className='hidden md:flex flex-col md:flex-row w-full justify-between items-start md:items-end gap-5 max-w-screen flex-wrap'>
                     <div className='flex w-full md:w-max gap-5 flex-wrap md:flex-nowrap'>
-                        <a target='_blank' href='https://www.linkedin.com/company/digital-sponge1/'><div className=' items-center flex w-max px-3 py-2 justify-between gap-3 text-lg md:text-xl font-bold border border-white rounded-full 
+                        {/* <a target='_blank' href='#'><div className=' items-center flex w-max px-3 py-2 justify-between gap-3 text-lg md:text-xl font-bold border border-white rounded-full 
                     hover:text-[#ffcc00] hover:border-[#ffcc00] transition-all duration-300'>
                             LinkedIn
                             <FaLinkedinIn />
-                        </div></a>
+                        </div></a> */}
                         <a target='_blank' href='https://www.instagram.com/digitalsponge.us/'><div className='items-center flex px-3 py-2 justify-between w-max border border-white rounded-full gap-3 text-lg md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Instagram
                             <FaInstagram />
@@ -99,18 +99,18 @@ const Contact = () => {
                     </div>
 
                     <div className='flex  w-full md:w-max gap-5 flex-wrap md:flex-nowrap'>
-                    <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg border border-white rounded-full md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                    {/* <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg border border-white rounded-full md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Threads
                             <FaThreads />
-                        </div></a>
-                        <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 border border-white rounded-full text-lg md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                        </div></a> */}
+                        {/* <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 border border-white rounded-full text-lg md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Whatsapp
                             <FaWhatsapp />
-                        </div></a>
-                        <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 border border-white rounded-full text-lg md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                        </div></a> */}
+                        {/* <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 border border-white rounded-full text-lg md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Facebook
                             <FaFacebookF />
-                        </div></a>
+                        </div></a> */}
                     </div>
                 </div>
 
