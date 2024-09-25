@@ -118,25 +118,27 @@ const Contact = () => {
 
                 <div className='flex md:hidden flex-col md:flex-row w-full justify-center items-center gap-5 max-w-screen flex-wrap'>
                     <div className='flex justify-center items-center w-full md:w-max gap-3 flex-wrap md:flex-nowrap'>
-                        <a target='_blank' href='https://www.linkedin.com/company/digital-sponge1/'><div className=' items-center flex w-max px-3 py-2 justify-between gap-3 text-2xl md:text-xl font-bold 
+                        {/* <a target='_blank' href='https://www.linkedin.com/company/digital-sponge1/'><div className=' items-center flex w-max px-3 py-2 justify-between gap-3 text-2xl md:text-xl font-bold 
                     hover:text-[#ffcc00] hover:border-[#ffcc00] transition-all duration-300'>
                             <FaLinkedinIn />
-                        </div></a>
+                        </div>
+                        </a> */}
                         <a target='_blank' href='https://www.instagram.com/digitalsponge.us/'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             <FaInstagram />
-                        </div></a>
+                        </div>
+                        </a>
                         <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             <FaXTwitter />
                         </div></a>
-                        <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                        {/* <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             <FaThreads />
                         </div></a>
                         <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             <FaWhatsapp />
-                        </div></a>
-                        <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                        </div></a> */}
+                        {/* <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             <FaFacebookF />
-                        </div></a>
+                        </div></a> */}
                     </div>
                 </div>
             </div>
