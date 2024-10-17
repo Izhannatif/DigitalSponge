@@ -82,6 +82,7 @@ const PortfolioSection = () => {
             { type: 'image', src: '/assets/Illustrations/12.webp' },
             { type: 'image', src: '/assets/Illustrations/13.webp' },
             { type: 'image', src: '/assets/Illustrations/14.webp' },
+            { type: 'image', src: '/assets/Illustrations/15.webp' },
         ],
         Logos:[
             { type: 'image', src: '/assets/Logos/1.webp' },
