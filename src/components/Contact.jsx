@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import letsConnect from '../assets/lets-connect-heading.png'
 import logoIcon from '../assets/logos/logo-icon.png'
 import logoText from '../assets/logos/logo-text.png'
-import {FaThreads, FaXTwitter } from 'react-icons/fa6';
-import {FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaThreads, FaXTwitter } from 'react-icons/fa6';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 
 
 const Contact = () => {
@@ -14,9 +14,9 @@ const Contact = () => {
         email: '',
         message: '',
     });
-    useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to top on component mount
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0); // Scroll to top on component mount
+    // }, []);
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -37,7 +37,7 @@ const Contact = () => {
                 threshold: 0.1,
             }
         );
-    
+
         if (contactRef.current) {
             observer.observe(contactRef.current);
         }
@@ -99,7 +99,9 @@ const Contact = () => {
                     </div>
 
                     <div className='flex  w-full md:w-max gap-5 flex-wrap md:flex-nowrap'>
-                    {/* <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg border border-white rounded-full md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
+                    <h1 className='text-lg font-medium text-white'>Powered By <span className='font-bold text-xl underline'> <a href="https://swiftcoda.com" target='_blank'>SwiftCoda.</a></span></h1>
+
+                        {/* <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-lg border border-white rounded-full md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             Threads
                             <FaThreads />
                         </div></a> */}
@@ -129,7 +131,8 @@ const Contact = () => {
                         </a>
                         <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             <FaXTwitter />
-                        </div></a>
+                        </div>
+                        </a>
                         {/* <a target='_blank' href='https://twitter.com/DigitalSpongeUS'><div className='items-center flex px-3 py-2 justify-between w-max gap-3 text-2xl md:text-xl font-bold  transition-all duration-300 hover:text-[#ffcc00] hover:border-[#ffcc00] '>
                             <FaThreads />
                         </div></a>
