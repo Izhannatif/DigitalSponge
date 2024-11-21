@@ -46,6 +46,7 @@ const PortfolioSection = () => {
             { type: 'video', src: '/assets/Animations/2.mp4' },
             { type: 'video', src: '/assets/Animations/3.mp4' },
             { type: 'video', src: '/assets/Animations/4.mp4' },
+            { type: 'video', src: '/assets/Animations/5.mp4' },
         ],
         Comics: [
             { type: 'image', src: '/assets/Comics/1.webp' },
@@ -83,11 +84,30 @@ const PortfolioSection = () => {
             { type: 'image', src: '/assets/Illustrations/13.webp' },
             { type: 'image', src: '/assets/Illustrations/14.webp' },
             { type: 'image', src: '/assets/Illustrations/15.webp' },
+            { type: 'image', src: '/assets/Illustrations/16.webp' },
+            { type: 'image', src: '/assets/Illustrations/17.webp' },
+            { type: 'image', src: '/assets/Illustrations/18.webp' },
+            { type: 'image', src: '/assets/Illustrations/19.webp' },
+            { type: 'image', src: '/assets/Illustrations/20.webp' },
+            { type: 'image', src: '/assets/Illustrations/21.webp' },
+            { type: 'image', src: '/assets/Illustrations/22.webp' },
+            { type: 'image', src: '/assets/Illustrations/23.webp' },
+            { type: 'image', src: '/assets/Illustrations/24.webp' },
+            { type: 'image', src: '/assets/Illustrations/25.webp' },
+            { type: 'image', src: '/assets/Illustrations/26.webp' },
+            { type: 'image', src: '/assets/Illustrations/27.webp' },
+            { type: 'image', src: '/assets/Illustrations/28.webp' },
+            { type: 'image', src: '/assets/Illustrations/29.webp' },
+            
         ],
         Logos:[
             { type: 'image', src: '/assets/Logos/1.webp' },
             { type: 'image', src: '/assets/Logos/2.webp' },
             { type: 'image', src: '/assets/Logos/3.webp' },
+            { type: 'image', src: '/assets/Logos/4.webp' },
+            { type: 'image', src: '/assets/Logos/5.webp' },
+            { type: 'image', src: '/assets/Logos/6.webp' },
+            { type: 'image', src: '/assets/Logos/7.webp' },
             ],
             
         Realistic:[
@@ -103,6 +123,9 @@ const PortfolioSection = () => {
             { type: 'image', src: '/assets/Twitch/3.webp' },
             { type: 'image', src: '/assets/Twitch/4.webp' },
             { type: 'image', src: '/assets/Twitch/5.webp' },
+            { type: 'image', src: '/assets/Twitch/6.webp' },
+            { type: 'image', src: '/assets/Twitch/7.webp' },
+            { type: 'image', src: '/assets/Twitch/8.webp' },
         ],
     };
 
