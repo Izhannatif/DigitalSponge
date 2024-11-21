@@ -1,73 +1,81 @@
-  import React, { useState, useEffect } from 'react';
-  import { Link as ScrollLink, scroller } from 'react-scroll';
-  import { Link as RouteLink, useNavigate, useLocation } from 'react-router-dom';
-  import { RiMenu4Fill } from 'react-icons/ri';
-  import { MdArrowOutward } from "react-icons/md";
-  import { CgClose } from 'react-icons/cg';
-  import { AnimatePresence, motion } from 'framer-motion';
-  import logoIcon from '../assets/logos/logo-icon.png';
-  import logoText from '../assets/logos/logo-text.png';
+import React, { useState, useEffect } from 'react';
+import { Link as ScrollLink, scroller } from 'react-scroll';
+import { Link as RouteLink, useNavigate, useLocation } from 'react-router-dom';
+import { RiMenu4Fill } from 'react-icons/ri';
+import { MdArrowOutward } from "react-icons/md";
+import { CgClose } from 'react-icons/cg';
+import { AnimatePresence, motion } from 'framer-motion';
+import logoIcon from '../assets/logos/logo-icon.png';
+import logoText from '../assets/logos/logo-text.png';
 import SpongeGame from './SpongeGame';
+import Marquee from 'react-fast-marquee';
 
-  const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [isDarkSectionVisible, setIsDarkSectionVisible] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isDarkSectionVisible, setIsDarkSectionVisible] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          const entry = entries[0];
-          if (entry.isIntersecting) {
-            setIsDarkSectionVisible(true);
-          } else {
-            setIsDarkSectionVisible(false);
-          }
-        },
-        {
-          threshold: 0.1, // Adjust this threshold as needed
-          rootMargin: '0px 0px -70% 0px', // Adjust the root margin if needed
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsDarkSectionVisible(true);
+        } else {
+          setIsDarkSectionVisible(false);
         }
-      );
+      },
+      {
+        threshold: 0.1, // Adjust this threshold as needed
+        rootMargin: '0px 0px -70% 0px', // Adjust the root margin if needed
+      }
+    );
 
-      const darkSection = document.getElementById('process');
+    const darkSection = document.getElementById('process');
+    if (darkSection) {
+      observer.observe(darkSection);
+    }
+
+    return () => {
       if (darkSection) {
-        observer.observe(darkSection);
+        observer.unobserve(darkSection);
       }
-
-      return () => {
-        if (darkSection) {
-          observer.unobserve(darkSection);
-        }
-      };
-    }, []);
-
-    const toggleMenu = () => {
-      setMenuOpen(!menuOpen);
     };
+  }, []);
 
-    const handleNavigation = (to) => {
-      if (location.pathname === '/') {
-        // On homepage, scroll to section
-        scrollToSection(to);
-      } else {
-        // Navigate to homepage and scroll to section
-        navigate('/');
-        setTimeout(() => scrollToSection(to), 100); // Adjust delay if needed
-      }
-      toggleMenu();
-    };
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-    const scrollToSection = (section) => {
-      scroller.scrollTo(section, {
-        smooth: true,
-        duration: 500,
-      });
-    };
+  const handleNavigation = (to) => {
+    if (location.pathname === '/') {
+      // On homepage, scroll to section
+      scrollToSection(to);
+    } else {
+      // Navigate to homepage and scroll to section
+      navigate('/');
+      setTimeout(() => scrollToSection(to), 100); // Adjust delay if needed
+    }
+    toggleMenu();
+  };
 
-    return (
-      <div className={`max-w-full w-full h-16 border-t-0 border-b-2 border-black flex justify-between items-center tracking-wide fixed z-50`}>
+  const scrollToSection = (section) => {
+    scroller.scrollTo(section, {
+      smooth: true,
+      duration: 500,
+    });
+  };
+
+  return (
+    <>
+      <div>
+        <Marquee className='font-bold  backdrop-blur-md fixed  w-full z-50 flex'>
+          <div className='text-xl border-r-2 border-l-2 border-black px-5'>Disclaimer </div>
+          <div className='px-5 font-normal text-lg'>If you receive a portfolio claiming to be an artist from Digital Sponge always confirm the sender's authenticity through our official Twitter handle: <a className='underline' href='https://x.com/digitalspongeus'>@DigitalSpongeUs</a>.</div>
+          </Marquee>
+      </div>
+      <div className={`max-w-full w-full h-16 border-t-2 border-b-2 border-black flex justify-between items-center tracking-wide fixed z-50 mt-7`}>
         <div className={`flex h-full ${!menuOpen ? 'w-full backdrop-blur-md' : ''}`}>
           <div onClick={toggleMenu} className={`${!menuOpen ? 'bg-[#ffd21d] text-white' : 'bg-transparent text-black border-b-2'} text-3xl font-bold h-full w-16 grid place-items-center hover:text-black hover:bg-white transition-all duration-500 border-r-2 border-black z-50`}>
             <div>{menuOpen ? <CgClose /> : <RiMenu4Fill />}</div>
@@ -143,13 +151,14 @@ import SpongeGame from './SpongeGame';
                 </ul>
               </div>
               <div className='hidden md:block w-1/2'>
-              <SpongeGame />
+                <SpongeGame />
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-    );
-  };
+    </>
+  );
+};
 
-  export default Navbar;
+export default Navbar;
